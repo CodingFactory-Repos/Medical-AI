@@ -15,7 +15,7 @@ This repository is supposed to be a result of a project we have to do in one or 
 This work has been made with students when we were in a group here is their github :
 
 ```bash
-$ Louis LEFEBVRE : https://github.com/Loule95490
+$ Louis LEFEBVRE : https://github.com/Loule95450
 $ Guillaume MORET (Creator) : https://github.com/AyakorK
 $ Lucas GONCALVES : https://github.com/RuKaSuu
 $ Baptiste DUMOULIN : https://github.com/Ptitbapt
