@@ -1,10 +1,6 @@
 # Medical-AI
 
- School-project about Artificial Intelligence and Deep-Learning process.
- 
-## Where are the most important files located?
-
-
+🔬 - School-project about Artificial Intelligence and Deep-Learning process.
 
 ## Explainations 
 
@@ -22,8 +18,7 @@ $ Baptiste DUMOULIN : https://github.com/Ptitbapt
 ```
 
 ## License
-
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Quality certification
-
-
+[![CodeFactor](https://www.codefactor.io/repository/github/codingfactory-repos/medical-ai/badge)](https://www.codefactor.io/repository/github/codingfactory-repos/medical-ai)
