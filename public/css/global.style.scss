@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'FF Mark';
+    src: local('FF Mark Bold'), local('FF-Mark-Bold'),
+        url('../fonts/Mark-Bold.woff2') format('woff2'),
+        url('../fonts/Mark-Bold.woff') format('woff'),
+        url('../fonts/Mark-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FF Mark', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    overflow-y: none;
+    scroll-behavior: smooth;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(142,160,255,0.3) 100%); 
+    padding: 0px 5%;
+    background-repeat: no-repeat;
+
+    header {
+        padding: 2em 0;
+        div.container {
+            display: flex;
+            justify-content: start;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                padding: 0 1.5em 0 0;
+            }
+
+            div.title {
+                h2 {
+                    font-size: 2.3rem;
+                    margin: 0;
+                    line-height: 2rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin: 0 0 0 1px;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
+}

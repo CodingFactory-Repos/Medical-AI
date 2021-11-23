@@ -8,6 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="<?= SITE_NAME ?>">
     <meta name="description" content="<?= CARD_DESCRIPTION ?>">
+    <link rel="icon" href="<?= URL_ROOT ?>/img/icon.png" type="image/png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
