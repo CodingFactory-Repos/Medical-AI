@@ -1,0 +1,166 @@
+main div.searchbar form {
+  width: 100%;
+  position: relative;
+}
+
+main div.searchbar form input {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 1em 1.3em;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+
+main div.searchbar form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #C8BFFF;
+  border-radius: 30px;
+  border: none;
+  width: 56px;
+  height: 100%;
+  color: #596275;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+}
+
+main div.searchbar form button span {
+  display: none;
+  -webkit-transition: display 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
+}
+
+main div.searchbar form button:hover {
+  width: 15%;
+}
+
+main div.searchbar form button:hover span {
+  display: inline;
+}
+
+main div.class {
+  margin: 2em 0 0;
+}
+
+main div.class h2.class-title {
+  font-size: 14px;
+  color: #BDBDBD;
+}
+
+main div.symptomList ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+main div.symptomList ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 2em;
+  background-color: #F0F0F0;
+  border-radius: 30px;
+}
+
+main div.infosList div.infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+main div.infosList div.infos a.infos-container {
+  padding: 1em;
+  border-radius: 30px;
+  height: 180px;
+  width: 28%;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  color: #fff;
+  margin: 1em 0;
+}
+
+main div.infosList div.infos a.infos-container img {
+  width: 30px;
+  height: 30px;
+  margin: 0 1em 0 0;
+  border-radius: 100%;
+  border: 3px solid #fff;
+}
+
+main div.infosList div.infos a.infos-container div.infos-text {
+  margin: 5px 0 0;
+}
+
+main div.infosList div.infos a.infos-container div.infos-text h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+main div.infosList div.infos a.infos-container div.infos-text h3.hidden {
+  font-size: 0;
+  display: none;
+}
+
+main div.infosList div.infos a.infos-container div.infos-text h4 {
+  font-size: .7rem;
+  margin: 0;
+}
+
+main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidden {
+  font-size: 1rem;
+  display: block;
+}
+
+main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
+  display: none;
+}
+/*# sourceMappingURL=index.style.css.map */
