@@ -3,17 +3,17 @@
 ?>
 <body>
     <?php
-        require APP_ROOT . '/views/inc/nav.php';
+        require APP_ROOT . '/views/inc/header.php';
     ?>
-
-    <header>
-        <h1>Welcome to <?= SITE_NAME ?> !</h1>
-        <h1>Go to 'app/views/index.php' to edit your site</h1>
-        <h1>Generate you files on https://mvc-generator.herokuapp.com/</h1>
-    </header>
-
     <main>
-        <!-- Generate you files on https://mvc-generator.herokuapp.com/ -->
+        <div id="searchbar">
+            <form action="<?= URL_ROOT; ?>/search" method="post">
+                <input type="text" name="search" placeholder="Search..">
+                <button type="submit" name="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            
+            
+        </div>
     </main>
     <?php
         require APP_ROOT . '/views/inc/footer.php';
