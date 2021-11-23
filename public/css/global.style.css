@@ -99,8 +99,8 @@ body main div.searchbar form button {
   color: #596275;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
-  -webkit-box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.13);
-          box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
 }
 
 body main div.searchbar form button span {
@@ -118,7 +118,7 @@ body main div.searchbar form button:hover span {
 }
 
 body main div.class {
-  margin: 2em 0 0 0;
+  margin: 2em 0 0;
 }
 
 body main div.class h2.class-title {
@@ -213,7 +213,7 @@ body main div.infosList div.infos a.infos-container img {
 }
 
 body main div.infosList div.infos a.infos-container div.infos-text {
-  margin: 5px 0 0 0;
+  margin: 5px 0 0;
 }
 
 body main div.infosList div.infos a.infos-container div.infos-text h3 {
@@ -222,7 +222,7 @@ body main div.infosList div.infos a.infos-container div.infos-text h3 {
 }
 
 body main div.infosList div.infos a.infos-container div.infos-text h3.hidden {
-  font-size: 0rem;
+  font-size: 0;
   display: none;
 }
 
@@ -239,4 +239,3 @@ body main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidd
 body main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   display: none;
 }
-/*# sourceMappingURL=global.style.css.map */
