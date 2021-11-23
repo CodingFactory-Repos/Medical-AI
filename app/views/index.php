@@ -1,9 +1,10 @@
 <?php
-	require APP_ROOT . '/views/inc/head.php';
+require APP_ROOT . '/views/inc/head.php';
 ?>
+
 <body>
     <?php
-        require APP_ROOT . '/views/inc/header.php';
+    require APP_ROOT . '/views/inc/header.php';
     ?>
     <main>
         <div class="searchbar">
@@ -12,39 +13,34 @@
                 <button type="submit" name="searchBtn"><i class="fas fa-search"></i><span> Search</span></button>
             </form>
         </div>
-        <div class="symptomList">
-            <h2> <i class="far fa-globe-europe"></i> Popular Symptoms </h2>
+        <div class="symptomList class">
+            <h2 class="class-title"><i class="far fa-globe-europe"></i> Popular Symptoms</h2>
             <ul>
-                <li class="symptoms">
-                    Cough
-                </li>
-                <li class="symptoms">
-                    Fever
-                </li>
-                <li class="symptoms">
-                    Stomach Aches
-                </li>
-                <li class="symptoms">
-                    Aches and Pains
-                </li>
-                <li class="symptoms">
-                    Headache
-                </li>
-                <li class="symptoms">
-                    Vomiting
-                </li>
+                <li class="symptoms">Cough</li>
+                <li class="symptoms">Fever</li>
+                <li class="symptoms">Stomach Aches</li>
+                <li class="symptoms">Aches and Pains</li>
+                <li class="symptoms">Headache</li>
+                <li class="symptoms">Vomiting</li>
             </ul>
         </div>
-        <div class="infosList">
-            <h2><i class="fad fa-file-medical-alt"></i> Medical News</h2>
-            <div id="info">
-                <img src="" alt="">
-                <h3 id="articleTitle"></h3>
-                <h4 id="name"></h4>
+        <div class="infosList class">
+            <h2 class="class-title"><i class="fad fa-file-medical-alt"></i> Medical News</h2>
+            <div class="infos">
+                <?php for ($i = 0; $i < 20; $i++) : ?>
+                    <a class="infos-container" style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('<?= $data['articles']['articles'][$i]['urlToImage'] ?>');" href="<?= $data['articles']['articles'][$i]['url'] ?>" target="_blank">
+                        <img src="http://www.getfavicon.org/get.pl?url=<?= $data['articles']['articles'][$i]['url'] ?>">
+                        <div class="infos-text">
+                            <h3 class="articleTitle visible"><?= substr($data['articles']['articles'][$i]['title'], 0, 27) ?>...</h3>
+                            <h3 class="articleTitle hidden"><?= $data['articles']['articles'][$i]['title'] ?></h3>
+                            <h4 class="authorName"><?= $data['articles']['articles'][$i]['author'] ?> - <?= $data['articles']['articles'][$i]['source']['name'] ?></h4>
+                        </div>
+                    </a>
+                <?php endfor; ?>
             </div>
         </div>
     </main>
     <?php
-        require APP_ROOT . '/views/inc/footer.php';
+    require APP_ROOT . '/views/inc/footer.php';
     ?>
 </body>
