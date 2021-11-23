@@ -12,10 +12,10 @@ body {
   overflow-y: none;
   scroll-behavior: smooth;
   background: white;
-  background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(152, 169, 255, 0.414)));
-  background: linear-gradient(0deg, white 0%, rgba(152, 169, 255, 0.414) 100%);
-  padding: 0 5%;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(152, 169, 255, 0.267)));
+  background: linear-gradient(0deg, white 0%, rgba(152, 169, 255, 0.267) 100%);
   background-repeat: no-repeat;
+  padding: 0 5%;
 }
 
 body header {
@@ -54,6 +54,16 @@ body header div.container div.title h3 {
   line-height: 1rem;
 }
 
+body div.onBack {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+body div.onBack img {
+  height: 100vh;
+}
+
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,5 +81,8 @@ body main {
   padding: 2em;
   width: 80%;
   border-radius: 40px;
+  z-index: 50;
+  position: relative;
+  margin-bottom: 5em;
 }
 /*# sourceMappingURL=global.style.css.map */

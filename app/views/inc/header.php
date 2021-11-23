@@ -7,3 +7,7 @@
         </div>
     </div>
 </header>
+
+<div class="onBack">
+    <img src="<?= URL_ROOT ?>/img/bg.svg">
+</div>

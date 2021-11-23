@@ -15,19 +15,16 @@ require APP_ROOT . '/views/inc/head.php';
         </div>
         <div class="symptomList class">
             <h2 class="class-title"><i class="far fa-globe-europe"></i> Popular Symptoms</h2>
-            <ul>
-                <li class="symptoms">Cough</li>
-                <li class="symptoms">Fever</li>
-                <li class="symptoms">Stomach Aches</li>
-                <li class="symptoms">Aches and Pains</li>
-                <li class="symptoms">Headache</li>
-                <li class="symptoms">Vomiting</li>
+            <ul class="class-body">
+                <?php for($i = 0; $i < count($data['symptomsRandomList']); $i++): ?>
+                    <li class="symptoms" id="<?= $data['symptomsRandomList'][$i]['ID'] ?>"><?= $data['symptomsRandomList'][$i]["Name"] ?></li>
+                <?php endfor; ?>
             </ul>
         </div>
         <div class="infosList class">
             <h2 class="class-title"><i class="fad fa-file-medical-alt"></i> Medical News</h2>
-            <div class="infos">
-                <?php for ($i = 0; $i < 20; $i++) : ?>
+            <div class="infos class-body">
+                <?php for ($i = 0; $i < 8; $i++) : ?>
                     <a class="infos-container" style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('<?= $data['articles']['articles'][$i]['urlToImage'] ?>');" href="<?= $data['articles']['articles'][$i]['url'] ?>" target="_blank">
                         <img src="http://www.getfavicon.org/get.pl?url=<?= $data['articles']['articles'][$i]['url'] ?>">
                         <div class="infos-text">

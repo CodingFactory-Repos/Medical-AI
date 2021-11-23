@@ -30,3 +30,8 @@ function callApi($URL)
 		return json_decode($response, true);
 	}
 }
+
+function discreetCallApi($URL)
+{
+	return json_decode(file_get_contents($URL), true);
+}

@@ -65,8 +65,9 @@ main div.symptomList ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
   padding: 0;
   margin: 0;
 }
@@ -85,7 +86,11 @@ main div.symptomList ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   padding: 1em 2em;
+  margin: 0 .5em;
   background-color: #F0F0F0;
   border-radius: 30px;
 }
@@ -98,19 +103,20 @@ main div.infosList div.infos {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
 }
 
 main div.infosList div.infos a.infos-container {
   padding: 1em;
-  border-radius: 60px 30px;
+  border-radius: 60px 30px 60px 30px;
   height: 180px;
   width: 28%;
   text-decoration: none;
@@ -124,8 +130,11 @@ main div.infosList div.infos a.infos-container {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   color: #fff;
-  margin: 1em 0;
+  margin: 1em .5em;
 }
 
 main div.infosList div.infos a.infos-container img {
@@ -163,3 +172,4 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidden {
 main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   display: none;
 }
+/*# sourceMappingURL=index.style.css.map */
