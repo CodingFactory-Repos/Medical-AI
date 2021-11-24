@@ -9,9 +9,11 @@ require APP_ROOT . '/views/inc/head.php';
     <main>
         <div class="searchbar">
             <form action="<?= URL_ROOT; ?>/search" method="post">
-                <input type="text" name="search" placeholder="Search..">
+                <input type="text" name="search" placeholder="Search.." id="searchBar">
                 <button type="submit" name="searchBtn"><i class="fas fa-search"></i><span> Search</span></button>
             </form>
+            <ul class="searchBarResults">
+            </ul>
         </div>
         <div class="symptomList class">
             <h2 class="class-title"><i class="far fa-globe-europe"></i> Popular Symptoms</h2>
@@ -37,6 +39,9 @@ require APP_ROOT . '/views/inc/head.php';
             </div>
         </div>
     </main>
+    <?php
+    require APP_ROOT . '/views/' . $data['scriptFile'] . '/script.php';
+    ?>
     <?php
     require APP_ROOT . '/views/inc/footer.php';
     ?>

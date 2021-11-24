@@ -1,3 +1,52 @@
+main div.searchbar ul.searchBarResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+
+main div.searchbar ul.searchBarResults li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 1em 2em;
+  margin: 0 .5em;
+  background-color: #C8BFFF;
+  border-radius: 30px;
+}
+
+main div.searchbar ul.searchBarResults li a {
+  text-decoration: none;
+  color: #000;
+}
+
 main div.searchbar form {
   width: 100%;
   position: relative;
@@ -172,3 +221,4 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidden {
 main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   display: none;
 }
+/*# sourceMappingURL=index.style.css.map */
