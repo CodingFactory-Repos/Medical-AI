@@ -15,11 +15,11 @@
 		/**
 		 * views/index.php
 		 */
-		public function index($query = null) {
-			if($query === null){
+		public function index() {
+			if(!isset($_GET['name']) && !isset($_GET['id'])) {
 				header('Location: '.URL_ROOT);
 			} else {
-				$diagnosisResults = discreetCallApi(URL_ROOT."/api/searchDiagnosis/".$query);
+				$diagnosisResults = discreetCallApi(URL_ROOT."/api/searchDiagnosis/".$_GET['id']);
 
 				$data = [
 					'headTitle' => 'Welcome !',

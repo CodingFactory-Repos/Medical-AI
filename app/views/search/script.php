@@ -1,5 +1,9 @@
 <script>
     $(document).ready(function() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        $('#searchForm').prepend('<p class="searchTag">' + urlParams.get('name') + ' <span><i class="fas fa-times"></i></span></p>');
         // On input change show results from
         $('#searchBar').on('input', function() {
             var search = $(this).val();
@@ -18,11 +22,14 @@
                         if (i >= 8) {
                             break;
                         } else {
-                            $('.searchBarResults').append('<li class="symptoms" id="' + data[i].ID + '"><a href="<?= URL_ROOT ?>/search/' + data[i].ID + '">' + data[i].Name + '</a></li>');
+                            $('.searchBarResults').append('<li class="symptoms" id="' + data[i].ID + '"><a href="<?= URL_ROOT ?>/search?id=' + data[i].ID + '&name=' + data[i].Name + '">' + data[i].Name + '</a></li>');
                         }
                     }
                 }
             });
+        });
+        $(".searchTag").on("click", () => {
+            console.log("ice")
         });
     });
 </script>

@@ -8,12 +8,8 @@ require APP_ROOT . '/views/inc/head.php';
     ?>
     <main>
         <div class="searchbar">
-            <form action="<?= URL_ROOT; ?>/search" method="post">
-                <p class="searchTag">Vomi <span><i class="fas fa-times"></i></span></p>
-                <p class="searchTag">Vomi <span><i class="fas fa-times"></i></span></p>
-                <p class="searchTag">Vomi <span><i class="fas fa-times"></i></span></p>
-
-                <input type="text" name="search" placeholder="Search.." id="searchBar">
+            <form id="searchForm">
+                <input type="text" name="search" placeholder="Search for your symptoms..." id="searchBar">
                 <button type="submit" name="searchBtn"><i class="fas fa-search"></i><span> Search</span></button>
             </form>
             <ul class="searchBarResults">

@@ -18,7 +18,7 @@
                         if (i >= 8) {
                             break;
                         } else {
-                            $('.searchBarResults').append('<li class="symptoms" id="' + data[i].ID + '"><a href="<?= URL_ROOT ?>/search/' + data[i].ID + '">' + data[i].Name + '</a></li>');
+                            $('.searchBarResults').append('<li class="symptoms" id="' + data[i].ID + '"><a href="<?= URL_ROOT ?>/search?id=' + data[i].ID + '&name=' + data[i].Name + '">' + data[i].Name + '</a></li>');
                         }
                     }
                 }
