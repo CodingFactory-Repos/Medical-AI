@@ -98,7 +98,7 @@ main div.searchbar form input {
   width: fill-available;
   padding: 1em 1.3em;
   border-radius: 30px;
-  border: 0;
+  border: none;
 }
 
 main div.searchbar form input:focus {
@@ -134,3 +134,4 @@ main div.searchbar form button:hover {
 main div.searchbar form button:hover span {
   display: inline;
 }
+/*# sourceMappingURL=search.style.css.map */
