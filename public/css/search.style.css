@@ -16,7 +16,7 @@ main div.searchbar ul.searchBarResults {
       flex-wrap: nowrap;
   overflow-x: auto;
   padding: 0;
-  margin: 1em 0 0 0;
+  margin: 1em 0 0;
 }
 
 main div.searchbar ul.searchBarResults li {
@@ -98,7 +98,7 @@ main div.searchbar form input {
   width: fill-available;
   padding: 1em 1.3em;
   border-radius: 30px;
-  border: 0px;
+  border: 0;
 }
 
 main div.searchbar form input:focus {
@@ -134,4 +134,3 @@ main div.searchbar form button:hover {
 main div.searchbar form button:hover span {
   display: inline;
 }
-/*# sourceMappingURL=search.style.css.map */
