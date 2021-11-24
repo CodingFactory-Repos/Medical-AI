@@ -1,0 +1,137 @@
+main div.searchbar ul.searchBarResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+
+main div.searchbar ul.searchBarResults li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 1em 2em;
+  margin: 0 .5em;
+  background-color: #C8BFFF;
+  border-radius: 30px;
+}
+
+main div.searchbar ul.searchBarResults li a {
+  text-decoration: none;
+  color: #000;
+}
+
+main div.searchbar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+main div.searchbar form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.5em 1em;
+  margin: .5em .25em;
+  background-color: #C8BFFF;
+  border-radius: 30px;
+}
+
+main div.searchbar form p span {
+  font-weight: bold;
+  margin: 0 0 0 .5em;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+main div.searchbar form p:hover {
+  cursor: pointer;
+}
+
+main div.searchbar form p:hover span {
+  color: red;
+}
+
+main div.searchbar form input {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 1em 1.3em;
+  border-radius: 30px;
+  border: 0px;
+}
+
+main div.searchbar form input:focus {
+  outline: none;
+}
+
+main div.searchbar form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #C8BFFF;
+  border-radius: 30px;
+  border: none;
+  width: 56px;
+  height: 100%;
+  color: #596275;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+}
+
+main div.searchbar form button span {
+  display: none;
+  -webkit-transition: display 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
+}
+
+main div.searchbar form button:hover {
+  width: 15%;
+}
+
+main div.searchbar form button:hover span {
+  display: inline;
+}
+/*# sourceMappingURL=search.style.css.map */

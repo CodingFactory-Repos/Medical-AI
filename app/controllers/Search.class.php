@@ -19,7 +19,16 @@
 			if($query === null){
 				header('Location: '.URL_ROOT);
 			} else {
+				$diagnosisResults = discreetCallApi(URL_ROOT."/api/searchDiagnosis/".$query);
 
+				$data = [
+					'headTitle' => 'Welcome !',
+					'cssFile' => 'search',
+					'scriptFile' => 'search',
+					'diagnosisResults' => $diagnosisResults
+				];
+
+				$this->render('search/index', $data);
 			}
 		}
 	}
