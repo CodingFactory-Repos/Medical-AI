@@ -16,7 +16,7 @@ main div.searchbar ul.searchBarResults {
       flex-wrap: nowrap;
   overflow-x: auto;
   padding: 0;
-  margin: 1em 0 0 0;
+  margin: 1em 0 0;
 }
 
 main div.searchbar ul.searchBarResults li {
@@ -221,4 +221,3 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidden {
 main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   display: none;
 }
-/*# sourceMappingURL=index.style.css.map */
