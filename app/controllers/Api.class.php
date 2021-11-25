@@ -9,7 +9,7 @@
 		public function __construct() {
 		    // Import SQL commands
 
-			//$this->userModel = $this->model('Api');
+			// $this->apiModel = $this->loadModel('apiModel');
 		}
 		
 		/**
@@ -23,9 +23,9 @@
 
 			if($query == "allSymptoms"){
 				if($option == null){
-					$data['result'] = json_encode(discreetCallApi("https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb"));
+					$data['result'] = json_encode(stockApi("allSymptoms", "https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb"));
 				} else {
-					$apiResult = discreetCallApi("https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb");
+					$apiResult = stockApi("allSymptoms", "https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb");
 
 					for($i = 0; $i < count($apiResult); $i++){
 						if(strstr($apiResult[$i]['Name'], lcfirst($option))){
@@ -43,7 +43,7 @@
 				if($option == null){
 					header('Location: '.URL_ROOT);
 				} else {
-					$apiResult = discreetCallApi("https://healthservice.priaid.ch/diagnosis?symptoms=[".$option."]&gender=male&year_of_birth=18&token=".TOKEN."&format=json&language=en-gb");
+					$apiResult = stockApi(str_replace(',', '-', $option), "https://healthservice.priaid.ch/diagnosis?symptoms=[".$option."]&gender=male&year_of_birth=18&token=".TOKEN."&format=json&language=en-gb");
 					$data['result'] = json_encode($apiResult);
 				}
 			}

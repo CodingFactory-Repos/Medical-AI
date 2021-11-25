@@ -29,6 +29,9 @@ require APP_ROOT . '/views/inc/head.php';
     require APP_ROOT . '/views/' . $data['scriptFile'] . '/script.php';
     ?>
     <?php
+    require APP_ROOT . '/views/script.php';
+    ?>
+    <?php
     require APP_ROOT . '/views/inc/footer.php';
     ?>
 </body>

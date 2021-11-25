@@ -18,7 +18,7 @@ require APP_ROOT . '/views/inc/head.php';
         <div class="symptomList class">
             <h2 class="class-title"><i class="far fa-globe-europe"></i> Popular Symptoms</h2>
             <ul class="class-body">
-                <?php for($i = 0; $i < count($data['symptomsRandomList']); $i++): ?>
+                <?php for ($i = 0; $i < count($data['symptomsRandomList']); $i++) : ?>
                     <li class="symptoms" id="<?= $data['symptomsRandomList'][$i]['ID'] ?>"><?= $data['symptomsRandomList'][$i]["Name"] ?></li>
                 <?php endfor; ?>
             </ul>
@@ -41,6 +41,7 @@ require APP_ROOT . '/views/inc/head.php';
     </main>
     <?php
     require APP_ROOT . '/views/' . $data['scriptFile'] . '/script.php';
+    require APP_ROOT . '/views/script.php';
     ?>
     <?php
     require APP_ROOT . '/views/inc/footer.php';
