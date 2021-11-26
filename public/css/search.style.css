@@ -134,4 +134,65 @@ main div.searchbar form button:hover {
 main div.searchbar form button:hover span {
   display: inline;
 }
+
+main div.diagnosisList div.infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main div.diagnosisList div.infos a.info-content {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 1em 2em;
+  margin: 1em .5em;
+  background-color: #ebebeb;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+main div.diagnosisList div.infos a.info-content h3 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+main div.diagnosisList div.infos a.info-content h3 span {
+  font-weight: normal;
+  font-size: .7em;
+  margin: 0;
+}
+
+main div.diagnosisList div.infos a.info-content p {
+  margin: .5em 0 0 0;
+  font-size: .8em;
+  color: #6d6d6d;
+}
 /*# sourceMappingURL=search.style.css.map */

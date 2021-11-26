@@ -43,7 +43,14 @@
 				if($option == null){
 					header('Location: '.URL_ROOT);
 				} else {
-					$apiResult = stockApi(str_replace(',', '-', $option), "https://healthservice.priaid.ch/diagnosis?symptoms=[".$option."]&gender=male&year_of_birth=18&token=".TOKEN."&format=json&language=en-gb");
+					$apiResult = stockApi(str_replace(',', '-', $option), "https://healthservice.priaid.ch/diagnosis?symptoms=[".$option."]&gender=male&year_of_birth=18&token=".TOKEN."&format=json&language=en-gb", "symptoms");
+					$data['result'] = json_encode($apiResult);
+				}
+			} else if($query == 'searchIssues') {
+				if($option == null){
+					header('Location: '.URL_ROOT);
+				} else {
+					$apiResult = stockApi($option, "https://healthservice.priaid.ch/issues/".$option."/info?token=".TOKEN."&format=json&language=en-gb", "issues");
 					$data['result'] = json_encode($apiResult);
 				}
 			}

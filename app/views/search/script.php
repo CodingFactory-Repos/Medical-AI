@@ -43,8 +43,24 @@
                 }
             });
         });
-        $(".searchTag").on("click", () => {
-            console.log("ice")
+        $(".searchTag").on("click", (e) => {
+            console.log(e.target.innerText);
+
+            let searchActualNames = "";
+            let searchActualIds = "";
+
+            for(i = 0; i < urlParams.get('name').split(',').length; i++) {
+                if(urlParams.get('name').split(',')[i] != e.target.innerText) {
+                    if(searchActualNames.length > 0) {
+                        searchActualNames += ",";
+                        searchActualIds += ",";
+                    }
+                    searchActualNames += urlParams.get('name').split(',')[i];
+                    searchActualIds += urlParams.get('id').split(',')[i];
+                }
+            }
+
+            window.location.href = '<?= URL_ROOT ?>/search?id=' + searchActualIds + '&name=' + searchActualNames;
         });
     });
 </script>

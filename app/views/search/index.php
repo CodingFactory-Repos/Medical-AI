@@ -19,9 +19,12 @@ require APP_ROOT . '/views/inc/head.php';
             <h2 class="class-title"><i class="fas fa-search"></i> Results</h2>
             <div class="infos class-body">
                 <?php for ($i = 0; $i < count($data['diagnosisResults']); $i++) : ?>
-                    <h3><?= $data['diagnosisResults'][$i]['Issue']['Name'] ?></h3>
-                    <p><?= $data['diagnosisResults'][$i]['Issue']['Accuracy'] ?>%</p>
+                    <a class="info-content" href="<?= URL_ROOT ?>/diagnosis/<?= $data['diagnosisResults'][$i]['Issue']['ID'] ?>">
+                        <h3><?= $data['diagnosisResults'][$i]['Issue']['Name'] ?> <span><?= round($data['diagnosisResults'][$i]['Issue']['Accuracy']) ?>%</span></h3>
+                        <p><?= $data['issuesResults'][$i]['DescriptionShort'] ?></p>
+                    </a>
                 <?php endfor; ?>
+
             </div>
         </div>
     </main>

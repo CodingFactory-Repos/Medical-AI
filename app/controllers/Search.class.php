@@ -21,11 +21,18 @@
 			} else {
 				$diagnosisResults = discreetCallApi(URL_ROOT."/api/searchDiagnosis/".$_GET['id']);
 
+				$issuesResults = [];
+
+				foreach ($diagnosisResults as $diagnosisResult) {
+					$issuesResults[] = stockApi($diagnosisResult['Issue']['ID'], "https://healthservice.priaid.ch/issues/".$diagnosisResult['Issue']['ID']."/info?token=".TOKEN."&format=json&language=en-gb", "issues");
+				}
+
 				$data = [
 					'headTitle' => 'Welcome !',
 					'cssFile' => 'search',
 					'scriptFile' => 'search',
-					'diagnosisResults' => $diagnosisResults
+					'diagnosisResults' => $diagnosisResults,
+					'issuesResults' => $issuesResults
 				];
 
 				$this->render('search/index', $data);

@@ -36,23 +36,36 @@ function discreetCallApi($URL)
 	return json_decode(file_get_contents($URL), true);
 }
 
-function stockApi($name, $URL)
+function stockApi($name, $URL, $folder = "")
 {
-	if(!is_dir('../app/api/' . $name)){
+	if($folder !== ""){
+		$rootURL = $folder . "/" . $name;
+	} else {
+		$rootURL = $name;
+	}
+
+	if(!is_dir('../app/api/' . $rootURL)){
 		try {
 			$apiContent = file_get_contents($URL);
 
-            mkdir('../app/api/' . $name);
+			if(strpos($rootURL, '/')){
+				if(!is_dir('../app/api/' . $folder)){
+					mkdir('../app/api/' . $folder);
+				}
+				mkdir('../app/api/' . $rootURL);
+			} else {
+				mkdir('../app/api/' . $rootURL);
+			}
 
-            file_put_contents('../app/api/' . $name . '/' . $name . '.json', $apiContent);
-
+            file_put_contents('../app/api/' . $rootURL . '/' . $name . '.json', $apiContent);
+ 
             return json_decode($apiContent, true);
         } catch (Exception $e) {
             return false;
         }
 	} else {
 		try {
-            $file_path = '../app/api/' . $name . '/' . $name . '.json';
+            $file_path = '../app/api/' . $rootURL . '/' . $name . '.json';
 
             $file_data = file_get_contents($file_path);
 

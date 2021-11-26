@@ -16,7 +16,7 @@
 		 * views/index.php
 		 */
 		public function index() {
-			$symptoms = discreetCallApi("https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb");
+			$symptoms = stockApi("allSymptoms", "https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb");
 			$symptomsRandomList = array();
 
 			for($i = 0; $i < 6; $i++) {

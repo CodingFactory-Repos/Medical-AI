@@ -15,7 +15,7 @@
                     $('.searchBarResults').text(" ");
 
                     for (var i = 0; i < data.length; i++) {
-                        if (i >= 8) {
+                        if (i >= 5) {
                             break;
                         } else {
                             $('.searchBarResults').append('<li class="symptoms" id="' + data[i].ID + '"><a href="<?= URL_ROOT ?>/search?id=' + data[i].ID + '&name=' + data[i].Name + '">' + data[i].Name + '</a></li>');
