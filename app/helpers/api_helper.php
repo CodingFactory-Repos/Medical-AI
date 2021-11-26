@@ -67,9 +67,21 @@ function stockApi($name, $URL, $folder = "")
 		try {
             $file_path = '../app/api/' . $rootURL . '/' . $name . '.json';
 
-            $file_data = file_get_contents($file_path);
+            $file_data = json_decode(file_get_contents($file_path), true);
 
-            return json_decode($file_data, true);
+			if($file_data === NULL){
+				try {
+					$apiContent = file_get_contents($URL);
+		
+					file_put_contents('../app/api/' . $rootURL . '/' . $name . '.json', $apiContent);
+		 
+					return json_decode($apiContent, true);
+				} catch (Exception $e) {
+					return false;
+				}
+			} else {
+				return $file_data;
+			}
         } catch (Exception $e) {
             return false;
         }
