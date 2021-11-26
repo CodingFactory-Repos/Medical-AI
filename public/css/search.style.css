@@ -191,8 +191,7 @@ main div.diagnosisList div.infos a.info-content h3 span {
 }
 
 main div.diagnosisList div.infos a.info-content p {
-  margin: .5em 0 0 0;
+  margin: .5em 0 0;
   font-size: .8em;
   color: #6d6d6d;
 }
-/*# sourceMappingURL=search.style.css.map */
