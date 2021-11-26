@@ -19,7 +19,7 @@ require APP_ROOT . '/views/inc/head.php';
             <h2 class="class-title"><i class="far fa-globe-europe"></i> Popular Symptoms</h2>
             <ul class="class-body">
                 <?php for ($i = 0; $i < count($data['symptomsRandomList']); $i++) : ?>
-                    <li class="symptoms" id="<?= $data['symptomsRandomList'][$i]['ID'] ?>"><?= $data['symptomsRandomList'][$i]["Name"] ?></li>
+                    <li class="symptoms" id="<?= $data['symptomsRandomList'][$i]['ID'] ?>"><a href="<?= URL_ROOT ?>/search?id=<?= $data['symptomsRandomList'][$i]['ID'] ?>&name=<?= $data['symptomsRandomList'][$i]['Name'] ?>"><?= $data['symptomsRandomList'][$i]["Name"] ?></a></li>
                 <?php endfor; ?>
             </ul>
         </div>
