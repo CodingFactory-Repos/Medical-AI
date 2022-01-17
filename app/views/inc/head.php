@@ -8,6 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="<?= SITE_NAME ?>">
     <meta name="description" content="<?= CARD_DESCRIPTION ?>">
+    <link rel="icon" href="<?= URL_ROOT ?>/img/icon.png" type="image/png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -32,7 +33,8 @@
     <?php if(isset($data['cssFile'])): ?><link rel="stylesheet" href="<?= URL_ROOT ?>/public/css/<?= $data['cssFile'] ?>.style.css"><?php endif; ?>
 
     <!-- Load FontAwsome and Jquery -->
-    <?= file_get_contents('https://api.headswift.com/cdn/0.1.0/?frameworks=headswift-stats,font-awesome,jquery&version=0.1.0,5.15.3,3.6.0'); ?>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
 

@@ -1,0 +1,172 @@
+main {
+    div.searchbar {
+        ul.searchBarResults {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0;
+            margin: 1em 0 0;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex: 0 0 auto;
+                padding: 1em 2em;
+                margin: 0 .5em;
+                background-color: #C8BFFF;
+                border-radius: 30px;
+                
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+            position: relative;
+
+
+            input {
+                width: fill-available;
+                padding: 1em 1.3em;
+                border-radius: 30px;
+                border: 1px solid #ccc;
+            }
+
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #C8BFFF;
+                border-radius: 30px;
+                border: none;
+                width: 56px;
+                height: 100%;
+                color: #596275;
+                transition: width 0.3s ease-in-out;
+                box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+
+                span {
+                    display: none;
+                    transition: display 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    width: 15%;
+
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+
+    div.class {
+        margin: 2em 0 0;
+
+        h2.class-title {
+            font-size: 14px;
+            color: #BDBDBD;
+        }
+    }
+
+    div.symptomList {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex: 0 0 auto;
+                padding: 1em 2em;
+                margin: 0 .5em;
+                background-color: #F0F0F0;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    div.infosList {
+        div.infos {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            align-items: center;
+
+            a.infos-container {
+                padding: 1em;
+                border-radius: 60px 30px;
+                height: 180px;
+                width: 28%;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                flex: 0 0 auto;
+                color: #fff;
+                margin: 1em .5em;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 1em 0 0;
+                    border-radius: 100%;
+                    border: 3px solid #fff;
+                }
+
+                div.infos-text {
+                    margin: 5px 0 0;
+
+                    h3 {
+                        font-size: 1rem;
+                        margin: 0;
+
+                        &.hidden {
+                            font-size: 0;
+                            display: none;
+                        }
+                    }
+
+                    h4 {
+                        font-size: .7rem;
+                        margin: 0;
+                    }
+                }
+
+                &:hover {
+                    div.infos-text {
+                        h3 {
+                            &.hidden {
+                                font-size: 1rem;
+                                display: block;
+                            }
+
+                            &.visible {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

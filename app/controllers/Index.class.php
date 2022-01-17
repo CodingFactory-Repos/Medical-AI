@@ -16,12 +16,21 @@
 		 * views/index.php
 		 */
 		public function index() {
+			$symptoms = stockApi("allSymptoms", "https://healthservice.priaid.ch/symptoms?token=".TOKEN."&format=json&language=en-gb");
+			$symptomsRandomList = array();
+
+			for($i = 0; $i < 6; $i++) {
+				array_push($symptomsRandomList, $symptoms[array_rand($symptoms)]);
+			}
+
 			$data = [
                 'headTitle' => 'Welcome !',
-				'title' => 'Hi you ! 😏',
-                'cssFile' => 'index'
+                'cssFile' => 'index',
+				'scriptFile' => 'index',
+				'articles' => callApi("https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=ef43bc7165c94de49c9206dc6f7c4a55"),
+				'symptomsRandomList' => $symptomsRandomList
 			];
 			
-			$this->render('index', $data);
+			$this->render('index/index', $data);
 		}
 	}
