@@ -1,5 +1,6 @@
 {
     "require": {
-        "orhanerday/open-ai": "^1.0"
+        "orhanerday/open-ai": "^1.0",
+        "devcoder-xyz/php-dotenv": "^1.1"
     }
 }

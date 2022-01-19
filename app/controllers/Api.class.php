@@ -1,5 +1,8 @@
 <?php
-	/**
+
+use Orhanerday\OpenAi\OpenAi;
+
+/**
 	 * Class Api
 	 */
 	class Api extends Controller {
@@ -9,7 +12,7 @@
 		public function __construct() {
 		    // Import SQL commands
 
-			// $this->apiModel = $this->loadModel('apiModel');
+			$this->aiModel = $this->loadModel('aiModel');
 		}
 		
 		/**
@@ -53,7 +56,40 @@
 					$apiResult = stockApi($option, "https://healthservice.priaid.ch/issues/".$option."/info?token=".TOKEN."&format=json&language=en-gb", "issues");
 					$data['result'] = json_encode($apiResult);
 				}
-			}
+			} else if($query == 'ai'){
+                // Load your key from an environment variable
+                $open_ai = new OpenAi(getenv('OPEN_AI_KEY'));
+
+                $complete = json_decode($open_ai->complete([
+                    'engine' => 'davinci',
+                    'prompt' => 'You: '.$_GET['query'],
+                    'temperature' => 0,
+                    "max_tokens" => 100,
+                    "top_p" => 1,
+                    "frequency_penalty" => 0,
+                    "presence_penalty" => 0,
+                    "stop" => ["You:"]
+                ]), true);
+
+                $results = [];
+
+                for ($i = 0; $i < count($complete['choices']); $i++) {
+                    $results[$i] = explode(": ", $complete['choices'][$i]['text'])[1];
+                    $results[$i] = explode("\n", $results[$i])[0];
+                }
+
+                if($this->aiModel->addHistory("You: ".$_GET['query'], 1)){
+                    if($this->aiModel->addHistory("Docteur HeyMedical: ".$results[0], 0)){
+                        $data['result'] = json_encode($results);
+                    } else {
+                        $data['result'] = json_encode(array("error" => "Error while bot saving history"));
+                    }
+                } else {
+                    $data['result'] = json_encode(array("error" => "Error while humain saving history"));
+                }
+            } else if($query == "bddtest"){
+                $data['result'] = json_encode($this->aiModel->getHistory());
+            }
 			
 			$this->render('api/index', $data);
 		}
