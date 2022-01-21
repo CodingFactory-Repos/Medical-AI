@@ -7,20 +7,20 @@ class aiModel
         $this->db = new Database();
     }
     /* === Exemple Code ===
-    
+
     public function updateExemple($user_id, $username)
     {
         $this->db->query('UPDATE users SET username = :username WHERE user_id = :user_id');
         $this->db->bind(':user_id', $user_id);
         $this->db->bind(':username', $username);
-    
+
         if($this->db->execute()){
             return true;
         } else {
             return false;
         }
     }
-    
+
     public function fetchExemple($user_id)
     {
         $this->db->query('SELECT * FROM users WHERE user_id = :user_id');
@@ -33,20 +33,20 @@ class aiModel
     public function getHistory($limit = null)
     {
         if($limit === null){
-            $this->db->query('SELECT text_history, is_humain FROM ai_history ORDER BY history_id DESC');
+            $this->db->query('SELECT text_history, is_human FROM ai_history ORDER BY history_id DESC');
         } else {
-            $this->db->query('SELECT text_history, is_humain FROM ai_history ORDER BY history_id DESC LIMIT :limit');
+            $this->db->query('SELECT text_history, is_human FROM ai_history ORDER BY history_id DESC LIMIT :limit');
             $this->db->bind(':limit', $limit);
         }
 
         return $this->db->fetchAll();
     }
 
-    public function addHistory($text, $is_humain = 0)
+    public function addHistory($text, $is_human = 0)
     {
-        $this->db->query('INSERT INTO ai_history (text_history, is_humain) VALUES (:text, :is_humain)');
+        $this->db->query('INSERT INTO ai_history (text_history, is_human) VALUES (:text, :is_human)');
         $this->db->bind(':text', $text);
-        $this->db->bind(':is_humain', $is_humain);
+        $this->db->bind(':is_human', $is_human);
 
         if($this->db->execute()){
             return true;
