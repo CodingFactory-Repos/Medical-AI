@@ -35,10 +35,34 @@ require APP_ROOT . '/views/inc/head.php';
                             <h4 class="authorName"><?= $data['articles']['articles'][$i]['author'] ?> - <?= $data['articles']['articles'][$i]['source']['name'] ?></h4>
                         </div>
                     </a>
+
+                    
                 <?php endfor; ?>
             </div>
+            
         </div>
+
+        
     </main>
+
+    <div class="chatbox">
+        <div class="chatbox-header">
+            <h3 class="chatbox-title">HeyMedical AI</h3>
+            <span class="chatbox-close">&times;</span>
+        </div>
+        <div class="chatbox-body">
+            <div class="chatbox-content">
+                <div class="chatbox-message">
+                    <div class="chatbox-message-content">
+                        <p>Hello, I'm the AI. How can I help you?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" class="chatbox-input" placeholder="Type your message here...">
+            <button class="chatbox-send">Send</button>
+    </div> 
     <?php
     require APP_ROOT . '/views/' . $data['scriptFile'] . '/script.php';
     require APP_ROOT . '/views/script.php';
