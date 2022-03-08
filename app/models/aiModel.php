@@ -1,11 +1,14 @@
 <?php
+
 class aiModel
 {
     private Database $db;
+
     public function __construct()
     {
         $this->db = new Database();
     }
+
     /* === Exemple Code ===
 
     public function updateExemple($user_id, $username)
@@ -29,29 +32,33 @@ class aiModel
     }
 
     */
-    
+
     public function getHistory($limit = null)
     {
-        if($limit === null){
-            $this->db->query('SELECT text_history, is_human FROM ai_history ORDER BY history_id DESC');
+        $bind = [];
+
+        if ($limit === null) {
+            $query = 'SELECT a_text_history, a_is_human FROM ai_history ORDER BY a_id DESC';
         } else {
-            $this->db->query('SELECT text_history, is_human FROM ai_history ORDER BY history_id DESC LIMIT :limit');
-            $this->db->bind(':limit', $limit);
+            $query = 'SELECT a_text_history, a_is_human FROM ai_history ORDER BY a_id DESC LIMIT :limit';
+
+            $bind = [
+                ':limit' => $limit
+            ];
         }
 
-        return $this->db->fetchAll();
+        return $this->db->sendRequest($query, $bind, 'fetchAll');
     }
 
     public function addHistory($text, $is_human = 0)
     {
-        $this->db->query('INSERT INTO ai_history (text_history, is_human) VALUES (:text, :is_human)');
-        $this->db->bind(':text', $text);
-        $this->db->bind(':is_human', $is_human);
+        $query = 'INSERT INTO ai_history (a_text_history, a_is_human) VALUES (:text, :is_human)';
 
-        if($this->db->execute()){
-            return true;
-        } else {
-            return false;
-        }
+        $bind = [
+            ':text' => $text,
+            ':is_human' => $is_human
+        ];
+
+        return $this->db->sendRequest($query, $bind, 'execute');
     }
 }

@@ -1,78 +1,56 @@
 <?php
-	/**
-	 * Class Database
-	 * Gère les requêtes à la bdd
-	 */
-	class Database {
-		private $dbHost = DB_HOST;
-		private $dbUser = DB_USER;
-		private $dbPass = DB_PASS;
-		private $dbName = DB_NAME;
-		
-		private $statement;
-		private $dbHandler;
-		private $error;
-		
-		/**
-		 * Database constructor.
-		 * Établi la connection à la bdd
-		 */
-		public function __construct() {
-			$conn = 'mysql:host=' . $this->dbHost . ';dbname=' . $this->dbName;
-			$options = array(
-				PDO::ATTR_PERSISTENT => true,
-				PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-			);
-			try {
-				$this->dbHandler = new PDO($conn, $this->dbUser, $this->dbPass, $options);
-			} catch (PDOException $e) {
-				$this->error = $e->getMessage();
-				echo $this->error;
-			}
-		}
-		
-		// Permet d’écrire des requêtes
-		public function query($sql) {
-			$this->statement = $this->dbHandler->prepare($sql);
-		}
-		
-		// Valeurs de liaison(bindValues)
-		public function bind($parameter, $value, $type = null) {
-			switch (is_null($type)) {
-				case is_int($value):
-					$type = PDO::PARAM_INT;
-					break;
-				case is_bool($value):
-					$type = PDO::PARAM_BOOL;
-					break;
-				case is_null($value):
-					$type = PDO::PARAM_NULL;
-					break;
-				default:
-					$type = PDO::PARAM_STR;
-			}
-			$this->statement->bindValue($parameter, $value, $type);
-		}
-		
-		// Exécuter la requête préparée
-		public function execute() {
-			return $this->statement->execute();
-		}
-		
-		// Renvoie un tableau
-		public function fetchAll() {
-			$this->execute();
-			return $this->statement->fetchAll(PDO::FETCH_OBJ);
-		}
-		
-		// Retourne une ligne spécifique en tant qu’objet
-		public function fetch() {
-			$this->execute();
-			return $this->statement->fetch(PDO::FETCH_OBJ);
-		}
-		
-		// Obtenir le nombre de lignes
-		public function rowCount() {
-			return $this->statement->rowCount();
-		}
-	}
+
+/**
+ * Class Database
+ * Gère les requêtes à la bdd
+ */
+class Database
+{
+    private $dbHost = DB_HOST;
+    private $dbUser = DB_USER;
+    private $dbPass = DB_PASS;
+    private $dbName = DB_NAME;
+
+    /**
+     * Database constructor.
+     * Établi la connection à la bdd
+     */
+
+    // Permet d’écrire des requêtes
+    public function sendRequest($query, $bindings = [], $return = "fetchAll")
+    {
+        // Create a array with all information to send to the api.
+        $data = [
+            'user' => $this->dbUser,
+            'password' => $this->dbPass,
+            'database' => $this->dbName,
+            'query' => $query,
+            'return' => $return,
+        ];
+
+        if (!empty($bindings)) {
+            $data['bindings'] = json_encode($bindings);
+        }
+
+        $ch = curl_init($this->dbHost);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        // If server doesn't respond, die error.
+        if (empty($response) && $response != "0") {
+            die('Erreur de connection au serveur de base de données. Verifiez les paramètres de connexion. <br>' . $this->dbHost . '<br>' . $this->dbUser . '<br>' . $this->dbPass . '<br>' . $this->dbName . '<br>Resultat : ' . $response);
+        }
+
+        // Return the response.
+        $result = json_decode($response, true);
+
+        if (isset($result['success']) && $result['success'] == false) {
+            die($result['message']);
+        }
+
+        return $result;
+    }
+}

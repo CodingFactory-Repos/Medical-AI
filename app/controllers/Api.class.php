@@ -64,7 +64,7 @@ use Orhanerday\OpenAi\OpenAi;
                     $history = $this->aiModel->getHistory();
                     $prompt = "";
                     for ($i = 0; $i < count($history); $i++) {
-                        $prompt = $history[$i]->text_history . $prompt . "\n";
+                        $prompt = $history[$i]['a_text_history'] . $prompt . "\n";
                     }
 
                     $complete = json_decode($open_ai->complete([

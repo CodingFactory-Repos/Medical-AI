@@ -1,0 +1,70 @@
+0|Ayakor: Qu'est ce que ebola ?|1
+1|Docteur HeyMedical: C'est une maladie, elle est très virulente.|0
+2|RuKaSu: C'est quoi les symptôme d'ebola|1
+3|Docteur HeyMedical: Elle provoque des hémorragies internes, et des vomissements.|0
+4|Loule: Qui est le virus qui a fait le plus de victime ?|1
+5|Docteur HeyMedical: Il n'y a pas de virus qui a fait le plus de victime, mais il y en a un qui est très virulent, le virus de la rage.|0
+6|Ayakor: Comment détecter les symptomes de ebola ?|1
+7|Docteur HeyMedical: Il faut faire des analyses, mais on peut le détecter par des symptômes tels que des vomissements, de la fièvre, des hémorragies internes.|0
+8|Loule: C'est quoi les symptômes de la grippe espagnole ?|1
+9|Docteur HeyMedical: Des douleurs articulaires, des maux de tête, des courbatures.|0
+10|Ayakor: Quoi d'autre ?|1
+11|Docteur HeyMedical: Des douleurs articulaires, des courbatures.|0
+12|RuKaSu: Que pense tu du vaccin|1
+13|Docteur HeyMedical: Je pense que c'est une bonne chose, car il permet de protéger les personnes qui ne peuvent pas se soigner.|0
+14|Loule: Comment es apparu le coronavirus ?|1
+15|Docteur HeyMedical: On ne sait pas vraiment, on suppose que c'est un virus qui est dans la nature, et qui a muté.|0
+16|RuKaSu: Comment soigner une grippe|1
+17|Docteur HeyMedical: Il faut se reposer, et prendre des médicaments pour soulager les douleurs.|0
+18|RuKaSu: Comment calmer une toux|1
+19|Docteur HeyMedical: Il faut boire beaucoup d'eau, et prendre des médicaments qui soulagent la toux.|0
+20|Loule: J'ai des vomissements, quesque tu me conseilles ?|1
+21|Docteur HeyMedical: Il faut boire beaucoup d'eau, et prendre des médicaments qui soulagent les vomissements.|0
+22|Ayakor: Quelle maladie puis-je avoir si j'ai une toux grasse ?|1
+23|Docteur HeyMedical: Tu peux avoir la tuberculose, il faut faire des analyses pour savoir si tu en as.|0
+24|Ayakor: Quelle est la maladie la plus commune de la planète ?|1
+25|Docteur HeyMedical: La tuberculose, c'est une maladie qui touche les poumons.|0
+26|RuKaSu: Comment détecter l'endométriose|1
+27|Docteur HeyMedical: Il faut faire des analyses, mais on peut le détecter par des douleurs à l'utérus.|0
+28|Loule: J'ai un irritation dans l'anus. quesque j'ai ?|1
+29|Docteur HeyMedical: Tu peux avoir des mycoses, il faut faire des analyses pour savoir si tu en as.|0
+30|Ayakor: Quel est le rhume ?|1
+31|Docteur HeyMedical: C'est une maladie qui touche les voies respiratoires, et qui provoque des maux de tête.|0
+32|RuKaSu: Ou peut-on faire des analyses|1
+33|Docteur HeyMedical: On peut les faire à l'hôpital.|0
+34|Loule: Quesque la grippe ?|1
+35|Docteur HeyMedical: C'est une maladie qui touche les voies respiratoires, et qui provoque des maux de tête.|0
+36|Loule: Pour savoir si l'on a le sida, il faut faire des analyses du sang en laboratoire|1
+37|Docteur HeyMedical: Oui, il faut faire des analyses du sang en laboratoire.|0
+38|Loule: Comment savoir si j'ai le sida ?|1
+39|Docteur HeyMedical: Il faut faire des analyses du sang en laboratoire.|0
+40|Ayakor: Est-ce qu'il existe un remède définitif contre le sida ?|1
+41|Docteur HeyMedical: Non, il n'y a pas de remède définitif contre le sida.|0
+42|RuKaSu: Peut-on en guérir ?|1
+43|Docteur HeyMedical: Non, on ne peut pas en guérir.|0
+44|Ayakor: Quelle est l'avancée médicale la plus récente ?|1
+45|Docteur HeyMedical: La vaccination.|0
+46|RuKaSu: Quel son les symptôme du bébé secoué|1
+47|Docteur HeyMedical: Il y a des hématomes, des lésions cérébrales, des lésions au niveau du cerveau.|0
+48|RuKaSu: Peut=on en guérir ?|1
+49|Docteur HeyMedical: Non, on ne peut pas en guérir.|0
+50|RuKaSu: Peut-on soigner sa calvicie|1
+51|Docteur HeyMedical: Oui, on peut soigner sa calvicie.|0
+52|Loule: Il n'existe aujourd'hui que deux traitements à la calvitie le minoxidil et le finastéride|1
+53|Docteur HeyMedical: Oui, il n'existe que deux traitements à la calvitie, le minoxidil et le finastéride.|0
+54|Loule: Comment soigner la calvicie ?|1
+55|Docteur HeyMedical: Il faut prendre des médicaments pour soigner la calvicie.|0
+56|Loule: Lequels ?|1
+57|Docteur HeyMedical: Le minoxidil et le finastéride.|0
+58|RuKaSu: Peut-on se faire opérer afin de soigner la calvicie ?|1
+59|Docteur HeyMedical: Oui, on peut se faire opérer afin de soigner la calvicie.|0
+60|RuKaSu: Ou ça ?|1
+61|Docteur HeyMedical: On peut se faire opérer à l'hôpital.|0
+62|Loule: Quel est le numero du l'hopital de pontoise ?|1
+63|Docteur HeyMedical: Le numéro de l'hopital de pontoise est 01 30 75 40 40|0
+64|Ayakor: Quelle est la maladie la plus commune ?|1
+65|Docteur HeyMedical: La tuberculose, c'est une maladie qui touche les poumons.|0
+66|Ayakor: Quelle est la grippe la plus dangereuse ?|1
+67|Docteur HeyMedical: La grippe espagnole, c'est une maladie qui touche les voies respiratoires.|0
+68|Ayakor: Que provoque la grippe espagnole|1
+69|Docteur HeyMedical: Elle provoque des hémorragies internes, et des vomissements.|0
