@@ -10,6 +10,7 @@ body {
   font-size: 16px;
   margin: 0;
   overflow-y: none;
+  overflow-x: none;
   scroll-behavior: smooth;
   background: white;
   background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(152, 169, 255, 0.267)));
@@ -79,7 +80,7 @@ body main {
       flex-wrap: wrap;
   background: #fff;
   padding: 2em;
-  width: 80%;
+  width: 70%;
   border-radius: 40px;
   z-index: 50;
   position: relative;
