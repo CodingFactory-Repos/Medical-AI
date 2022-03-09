@@ -84,7 +84,6 @@ main div.searchbar form button {
 }
 
 main div.searchbar form button span {
-  opacity: 0;
   -webkit-transition: opacity 5s ease-in-out;
   transition: opacity 5s ease-in-out;
   display: none;
@@ -99,7 +98,6 @@ main div.searchbar form button:hover span {
   display: block;
   cursor: pointer;
   font-size: 0.8rem;
-  opacity: 1;
 }
 
 main div.class {
@@ -245,10 +243,10 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   width: 30%;
   max-width: 300px;
   min-width: 80px;
-  height: 40%;
+  height: 39%;
   margin-bottom: 80px;
-  background: #cfc8ff;
-  border-radius: 0 0 30px 30px;
+  background: #d4ceffea;
+  border-radius: 30px;
   -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
           box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
   z-index: 1;
@@ -268,7 +266,7 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 30px 30px 0 0;
-  background: #cfc8ff;
+  background: #d4ceffea;
 }
 
 .chatbox .chatbox-header h3 {
@@ -280,8 +278,8 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 
 .chatbox .chatbox-header span {
   position: absolute;
-  top: 0;
-  right: 8px;
+  top: 5px;
+  right: 12px;
   font-size: 1.2rem;
   cursor: pointer;
   -webkit-transition: 0.2s ease-in-out;
@@ -295,14 +293,14 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 .chatbox .chatbox-header button {
   background: transparent;
   border: none;
-  color: #C8BFFF;
+  color: #dfdaff;
   font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
 .chatbox .chatbox-header button:hover {
-  color: #C8BFFF;
+  color: #ddbfff;
 }
 
 .chatbox .chatbox-body {
@@ -328,9 +326,27 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   margin: 0 0 .5em;
 }
 
-.chatbox .chatbox-body .chatbox-message .chatbox-message-text {
-  font-size: .8rem;
-  margin: 0;
+.chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage {
+  background: #d4ceffea;
+  border-radius: 30px;
+  padding: .5em 1em;
+  text-align: right;
+  color: #3d3838;
+  font-size: 0.9rem;
+}
+
+.chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage p.AIMessage {
+  background: #fff;
+  border-radius: 30px;
+  padding: .5em 1em;
+  text-align: left;
+  color: #5f5f5f;
+  font-size: 1rem;
+}
+
+.chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage p.AIMessage:hover {
+  background: #fff;
+  color: #000;
 }
 
 .chatbox .chatbox-body .chatbox-message .chatbox-message-time {
@@ -345,7 +361,7 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 
 .chatbox .chatbox-footer input {
   position: absolute;
-  top: 300px;
+  top: 305px;
   width: calc(95%);
   height: 30px;
   padding: .5em;
@@ -355,12 +371,12 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 
 .chatbox .chatbox-footer button {
   position: absolute;
-  top: 350px;
-  background: #6961a1;
+  top: 340px;
+  background: #2d1d3d42;
   border-radius: 30px;
   min-width: 200px;
   border: none;
-  color: #bbbbbb;
+  color: #e7e7e7;
   font-size: 2rem;
   margin: 0;
   padding: 0;
@@ -373,6 +389,7 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 
 .chatbox .chatbox-footer button:hover {
   color: #ffffff;
+  background: #422b5842;
   cursor: pointer;
 }
 /*# sourceMappingURL=index.style.css.map */

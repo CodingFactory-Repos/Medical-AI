@@ -54,7 +54,16 @@ require APP_ROOT . '/views/inc/head.php';
             <div class="chatbox-content">
                 <div class="chatbox-message">
                     <div class="chatbox-message-content">
-                        <p>Hello, I'm the AI. How can I help you?</p>
+                        <p class="AIMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="UserMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="AIMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="UserMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="AIMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="UserMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="AIMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="UserMessage">Hello, I'm the AI. How can I help you?</p>
+                        <p class="AIMessage">Hello, I'm the AI. How can I help you?</p>
+
                     </div>
                 </div>
             </div>
