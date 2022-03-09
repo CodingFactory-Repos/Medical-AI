@@ -18,6 +18,7 @@
     
     // APP ROOT
     define('APP_ROOT', dirname(dirname(__FILE__)));
+    define('PUBLIC_ROOT', dirname(dirname(dirname(__FILE__))) . '/public');
     
     // URL ROOT
     if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false){

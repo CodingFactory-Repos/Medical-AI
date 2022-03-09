@@ -1,83 +1,56 @@
 @font-face {
-  font-family: 'FF Mark';
+  font-family: "FF Mark";
   src: local("FF Mark Bold"), local("FF-Mark-Bold"), url("../fonts/Mark-Bold.woff2") format("woff2"), url("../fonts/Mark-Bold.woff") format("woff"), url("../fonts/Mark-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-
 body {
-  font-family: 'FF Mark', sans-serif;
+  font-family: "FF Mark", sans-serif;
   font-size: 16px;
   margin: 0;
   overflow-y: none;
   overflow-x: none;
   scroll-behavior: smooth;
   background: white;
-  background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(152, 169, 255, 0.267)));
   background: linear-gradient(0deg, white 0%, rgba(152, 169, 255, 0.267) 100%);
   background-repeat: no-repeat;
   padding: 0 5%;
 }
-
 body header {
   padding: 2em 0;
 }
-
 body header div.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
 }
-
 body header div.container img {
   padding: 0 1.5em 0 0;
 }
-
 body header div.container div.title h2 {
   font-size: 2.3rem;
   margin: 0;
   line-height: 2rem;
 }
-
 body header div.container div.title h3 {
   font-size: 1.5rem;
   margin: 0 0 0 1px;
   line-height: 1rem;
 }
-
 body div.onBack {
   position: fixed;
   top: 0;
   right: 0;
 }
-
 body div.onBack img {
   height: 100vh;
 }
-
 body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   background: #fff;
   padding: 2em;
   width: 70%;
@@ -86,4 +59,5 @@ body main {
   position: relative;
   margin-bottom: 5em;
 }
+
 /*# sourceMappingURL=global.style.css.map */
