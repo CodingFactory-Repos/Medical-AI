@@ -84,18 +84,22 @@ main div.searchbar form button {
 }
 
 main div.searchbar form button span {
+  opacity: 0;
+  -webkit-transition: opacity 5s ease-in-out;
+  transition: opacity 5s ease-in-out;
   display: none;
-  -webkit-transition: display 0.2s ease-in-out;
-  transition: display 0.2s ease-in-out;
 }
 
 main div.searchbar form button:hover {
-  width: 10%;
+  cursor: pointer;
+  width: 8%;
 }
 
 main div.searchbar form button:hover span {
-  display: inline;
+  display: block;
   cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 1;
 }
 
 main div.class {
@@ -220,6 +224,11 @@ main div.infosList div.infos a.infos-container div.infos-text h4 {
   margin: 0;
 }
 
+main div.infosList div.infos a.infos-container:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidden {
   font-size: 1rem;
   display: block;
@@ -263,8 +272,24 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox .chatbox-header h3 {
-  font-size: 1rem;
-  margin: 0;
+  font-size: 1.2rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.chatbox .chatbox-header span {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.chatbox .chatbox-header span:hover {
+  color: #9c0000;
 }
 
 .chatbox .chatbox-header button {
@@ -319,7 +344,9 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox .chatbox-footer input {
-  width: calc(100%);
+  position: absolute;
+  top: 300px;
+  width: calc(95%);
   height: 30px;
   padding: .5em;
   border-radius: 30px;
@@ -327,6 +354,8 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox .chatbox-footer button {
+  position: absolute;
+  top: 350px;
   background: #6961a1;
   border-radius: 30px;
   min-width: 200px;
