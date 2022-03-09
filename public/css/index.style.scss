@@ -216,7 +216,6 @@ main {
             margin: 0 0 .5em;
             .chatbox-message-content {
                 p.UserMessage {
-                    background: #d4ceffea;
                     border-radius: 30px;
                     padding: .5em 1em;
                     text-align: right;
@@ -229,10 +228,6 @@ main {
                         text-align: left;
                         color: rgb(95, 95, 95);
                         font-size: 1rem;
-                        &:hover {
-                            background: #fff;
-                            color: #000;
-                        }
                     }
                 }
             }

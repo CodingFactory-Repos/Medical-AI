@@ -327,7 +327,6 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage {
-  background: #d4ceffea;
   border-radius: 30px;
   padding: .5em 1em;
   text-align: right;
@@ -342,11 +341,6 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   text-align: left;
   color: #5f5f5f;
   font-size: 1rem;
-}
-
-.chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage p.AIMessage:hover {
-  background: #fff;
-  color: #000;
 }
 
 .chatbox .chatbox-body .chatbox-message .chatbox-message-time {
