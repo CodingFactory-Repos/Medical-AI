@@ -326,6 +326,10 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   margin: 0 0 .5em;
 }
 
+.chatbox .chatbox-body .chatbox-message .chatbox-message-content {
+  overflow: hidden;
+}
+
 .chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage {
   border-radius: 30px;
   padding: .5em 1em;
