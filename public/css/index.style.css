@@ -1,72 +1,44 @@
 main {
   overflow: hidden;
 }
-
 main div.searchbar {
   width: 120%;
 }
-
 main div.searchbar ul.searchBarResults {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
   overflow-x: auto;
   padding: 0;
   margin: 1em 0 0;
 }
-
 main div.searchbar ul.searchBarResults li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 auto;
   padding: 1em 2em;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   background-color: #C8BFFF;
   border-radius: 30px;
 }
-
 main div.searchbar ul.searchBarResults li a {
   text-decoration: none;
   color: #000;
 }
-
 main div.searchbar form {
   width: 85%;
   position: relative;
 }
-
 main div.searchbar form input {
   width: 95%;
   padding: 1em;
   border-radius: 30px;
   border: 1px solid #ccc;
 }
-
 main div.searchbar form button {
   position: absolute;
   top: 0;
@@ -77,124 +49,71 @@ main div.searchbar form button {
   width: 56px;
   height: 100%;
   color: #596275;
-  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
-          box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
 }
-
 main div.searchbar form button span {
-  -webkit-transition: opacity 5s ease-in-out;
   transition: opacity 5s ease-in-out;
   display: none;
 }
-
 main div.searchbar form button:hover {
   cursor: pointer;
   width: 8%;
 }
-
 main div.searchbar form button:hover span {
   display: block;
   cursor: pointer;
   font-size: 0.8rem;
 }
-
 main div.class {
   margin: 2em 0 0;
 }
-
 main div.class h2.class-title {
   font-size: 14px;
   color: #BDBDBD;
 }
-
 main div.symptomList ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   overflow-x: auto;
   padding: 0;
   margin: 0;
 }
-
 main div.symptomList ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 auto;
   padding: 1em 2em;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   background-color: #F0F0F0;
   border-radius: 30px;
 }
-
 main div.infosList div.infos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: nowrap;
   overflow-x: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 main div.infosList div.infos a.infos-container {
   padding: 1em;
   border-radius: 60px 30px;
   height: 180px;
   width: 28%;
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: end;
+  flex: 0 0 auto;
   color: #fff;
-  margin: 1em .5em;
+  margin: 1em 0.5em;
 }
-
 main div.infosList div.infos a.infos-container img {
   width: 30px;
   height: 30px;
@@ -202,36 +121,28 @@ main div.infosList div.infos a.infos-container img {
   border-radius: 100%;
   border: 3px solid #fff;
 }
-
 main div.infosList div.infos a.infos-container div.infos-text {
   margin: 5px 0 0;
 }
-
 main div.infosList div.infos a.infos-container div.infos-text h3 {
   font-size: 1rem;
   margin: 0;
 }
-
 main div.infosList div.infos a.infos-container div.infos-text h3.hidden {
   font-size: 0;
   display: none;
 }
-
 main div.infosList div.infos a.infos-container div.infos-text h4 {
-  font-size: .7rem;
+  font-size: 0.7rem;
   margin: 0;
 }
-
 main div.infosList div.infos a.infos-container:hover {
-  -webkit-transition: 1s;
   transition: 1s;
 }
-
 main div.infosList div.infos a.infos-container:hover div.infos-text h3.hidden {
   font-size: 1rem;
   display: block;
 }
-
 main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   display: none;
 }
@@ -247,49 +158,34 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   margin-bottom: 80px;
   background: #d4ceffea;
   border-radius: 30px;
-  -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
-          box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
   z-index: 1;
   margin-right: 30px;
 }
-
 .chatbox .chatbox-header {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 30px 30px 0 0;
   background: #d4ceffea;
 }
-
 .chatbox .chatbox-header h3 {
   font-size: 1.2rem;
   margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .chatbox .chatbox-header span {
   position: absolute;
   top: 5px;
   right: 12px;
   font-size: 1.2rem;
   cursor: pointer;
-  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-
 .chatbox .chatbox-header span:hover {
   color: #9c0000;
 }
-
 .chatbox .chatbox-header button {
   background: transparent;
   border: none;
@@ -298,75 +194,56 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   margin: 0;
   padding: 0;
 }
-
 .chatbox .chatbox-header button:hover {
   color: #ddbfff;
 }
-
 .chatbox .chatbox-body {
   height: calc(80% - 1em);
   overflow-y: scroll;
   padding: 1em;
 }
-
 .chatbox .chatbox-body .chatbox-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 .5em;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 0.5em;
 }
-
 .chatbox .chatbox-body .chatbox-message .chatbox-message-content {
   overflow: hidden;
 }
-
 .chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage {
   border-radius: 30px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   text-align: right;
   color: #3d3838;
   font-size: 0.9rem;
 }
-
 .chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage p.AIMessage {
   background: #fff;
   border-radius: 30px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   text-align: left;
   color: #5f5f5f;
   font-size: 1rem;
 }
-
 .chatbox .chatbox-body .chatbox-message .chatbox-message-time {
   font-size: 1rem;
   margin: 0;
 }
-
 .chatbox .chatbox-footer {
   border-radius: 30px 30px 0 0;
   background: #C8BFFF;
 }
-
 .chatbox .chatbox-footer input {
   position: absolute;
   top: 305px;
-  width: calc(95%);
+  width: 95%;
   height: 30px;
-  padding: .5em;
+  padding: 0.5em;
   border-radius: 30px;
   border: 1px solid #ccc;
 }
-
 .chatbox .chatbox-footer button {
   position: absolute;
   top: 340px;
@@ -381,13 +258,12 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   margin-top: 10px;
   margin-left: 50%;
   margin-bottom: 10px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .chatbox .chatbox-footer button:hover {
   color: #ffffff;
   background: #422b5842;
   cursor: pointer;
 }
+
 /*# sourceMappingURL=index.style.css.map */
