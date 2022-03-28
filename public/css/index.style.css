@@ -97,7 +97,7 @@ main div.class {
 
 main div.class h2.class-title {
   font-size: 14px;
-  color: #BDBDBD;
+  color: #000000;
 }
 
 main div.symptomList ul {
@@ -142,6 +142,11 @@ main div.symptomList ul li {
   margin: 0 .5em;
   background-color: #F0F0F0;
   border-radius: 30px;
+}
+
+main div.symptomList ul li a {
+  text-decoration: none;
+  color: #000;
 }
 
 main div.infosList div.infos {
@@ -223,6 +228,7 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox {
+  z-index: 11;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -232,10 +238,12 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   border-radius: 0 0 30px 30px;
   -webkit-box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
           box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
-  z-index: 1;
+  margin-right: 30px;
 }
 
 .chatbox .chatbox-header {
+  z-index: 11;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,15 +259,34 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
           align-items: center;
   padding: 1em;
   border-radius: 30px 30px 0 0;
-  background: #cfc8ff;
+  background: #9996b388;
 }
 
 .chatbox .chatbox-header h3 {
-  font-size: 1rem;
-  margin: 0;
+  z-index: 11;
+  font-size: 1.2rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.chatbox .chatbox-header span {
+  z-index: 11;
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.chatbox .chatbox-header span:hover {
+  color: #9c0000;
 }
 
 .chatbox .chatbox-header button {
+  z-index: 11;
   background: transparent;
   border: none;
   color: #C8BFFF;
@@ -269,7 +296,7 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox .chatbox-header button:hover {
-  color: #C8BFFF;
+  color: #b29ace;
 }
 
 .chatbox .chatbox-body {

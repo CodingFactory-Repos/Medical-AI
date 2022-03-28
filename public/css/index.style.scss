@@ -63,7 +63,7 @@ main {
         margin: 2em 0 0;
         h2.class-title {
             font-size: 14px;
-            color: #BDBDBD;
+            color: #000000;
         }
     }
     div.symptomList {
@@ -86,6 +86,10 @@ main {
                 margin: 0 .5em;
                 background-color: #F0F0F0;
                 border-radius: 30px;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
             }
         }
     }
@@ -150,6 +154,7 @@ main {
 }
 
 .chatbox {
+    z-index: 11;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -158,20 +163,37 @@ main {
     background: #cfc8ff;
     border-radius: 0 0 30px 30px;
     box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
-    z-index: 1;
+    margin-right: 30px;
     .chatbox-header {
+        z-index: 11;
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 1em;
         border-radius: 30px 30px 0 0;
-        background: #cfc8ff;
+        background: #9996b388;
         h3 {
-            font-size: 1rem;
-            margin: 0;
+            z-index: 11;
+            font-size: 1.2rem;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        span {
+            z-index: 11;
+            position: absolute;
+            top: 5px;
+            right: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                color: rgb(156, 0, 0);
+            }
         }
         button {
+            z-index: 11;
             background: transparent;
             border: none;
             color: #C8BFFF;
@@ -179,7 +201,7 @@ main {
             margin: 0;
             padding: 0;
             &:hover {
-                color: #C8BFFF;
+                color: #b29ace;
             }
         }
     }
