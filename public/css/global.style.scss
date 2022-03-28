@@ -5,6 +5,18 @@
     font-style: normal;
 }
 
+.iframe {
+    // Faire passer le iframe devant les autres sans pour autant cacher le body et le header
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    // Pointer interaction events
+    pointer-events: visiblePainted;
+}
+
 body {
     font-family: 'FF Mark', sans-serif;
     font-size: 16px;
@@ -14,30 +26,29 @@ body {
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(152, 169, 255, 0.267) 100%);
     background-repeat: no-repeat;
-    
     padding: 0 5%;
-
     header {
         padding: 2em 0;
-
         div.container {
+            z-index: 49;
             display: flex;
             justify-content: start;
             flex-direction: row;
             align-items: center;
-
             img {
+                z-index: 11;
                 padding: 0 1.5em 0 0;
             }
-
             div.title {
+                z-index: 11;
                 h2 {
+                    z-index: 1;
                     font-size: 2.3rem;
                     margin: 0;
                     line-height: 2rem;
                 }
-
                 h3 {
+                    z-index: 11;
                     font-size: 1.5rem;
                     margin: 0 0 0 1px;
                     line-height: 1rem;
@@ -45,23 +56,12 @@ body {
             }
         }
     }
-
-    div.onBack {
-        position: fixed;
-        top: 0;
-        right: 0;
-
-        img {
-            height: 100vh;
-        }
-    }
-
     main {
         display: flex;
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
-        background: #fff;
+        background: rgba(215, 143, 233, 0.242);
         padding: 2em;
         width: 80%;
         border-radius: 40px;
@@ -69,4 +69,66 @@ body {
         position: relative;
         margin-bottom: 5em;
     }
+    footer {
+        .hideLogo {
+            width: 40px;
+            height: 40px;
+            background-color: #F9CDEA;
+            position: absolute;
+            top: 94%;
+            left: 97%;
+            z-index: 400;
+        }
+    }
+}
+
+.diseaseName {
+    background: #cfcfcf73;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.diseaseDesc {
+    background: #cfcfcf73;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+}
+
+.diseaseLongDesc {
+    background: #cfcfcf73;
+    color: rgba(15, 15, 15, 0.76);
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+}
+
+.diseaseListSymptoms {
+    background: #cfcfcf73;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+}
+
+.diseaseProName {
+    background: #cfcfcf73;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+}
+
+.diseaseSynonyms {
+    background: #cfcfcf73;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
+}
+
+.diseaseTreatment {
+    background: #cfcfcf73;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 1em 0;
 }
