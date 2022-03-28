@@ -1,9 +1,15 @@
 <?php
     // Database Settings
-    define('DB_HOST', '');
-    define('DB_USER', '');
-    define('DB_PASS', '');
-    define('DB_NAME', '');
+    use DevCoder\DotEnv;
+
+    require dirname(dirname(dirname(__FILE__))) . '/vendor/autoload.php';
+
+    (new DotEnv(__DIR__ . '/.env'))->load();
+
+    define('DB_HOST', getenv('DB_HOST'));
+    define('DB_USER', getenv('DB_USER'));
+    define('DB_PASS', getenv('DB_PASS'));
+    define('DB_NAME', getenv('DB_NAME'));
     
     //define('DB_HOST', 'localhost');
     //define('DB_USER', 'root');
@@ -12,6 +18,7 @@
     
     // APP ROOT
     define('APP_ROOT', dirname(dirname(__FILE__)));
+    define('PUBLIC_ROOT', dirname(dirname(dirname(__FILE__))) . '/public');
     
     // URL ROOT
     if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false){

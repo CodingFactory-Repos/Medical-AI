@@ -54,18 +54,18 @@ require APP_ROOT . '/views/inc/head.php';
             <div class="chatbox-content">
                 <div class="chatbox-message">
                     <div class="chatbox-message-content">
-                        <p>Hello, I'm the AI. How can I help you?</p>
+                        <p class="AIMessage">Docteur HeyMedical: Saisissez votre prénom afin de commencer</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="chatbox-footer">
+        <from class="chatbox-footer">
             <input type="text" class="chatbox-input" placeholder="Type your message here...">
-            <button class="chatbox-send">Send</button>
-    </div> 
+            <button class="chatbox-send" type="submit">Send</button>
+        </from>
+    </div>
     <?php
     require APP_ROOT . '/views/' . $data['scriptFile'] . '/script.php';
-    require APP_ROOT . '/views/script.php';
     ?>
     <?php
     require APP_ROOT . '/views/inc/footer.php';

@@ -1,5 +1,7 @@
 main {
+    overflow: hidden;
     div.searchbar {
+        width: 120%;
         ul.searchBarResults {
             display: flex;
             flex-direction: row;
@@ -26,11 +28,11 @@ main {
             }
         }
         form {
-            width: 100%;
+            width: 85%;
             position: relative;
             input {
-                width: fill-available;
-                padding: 1em 1.3em;
+                width: 95%;
+                padding: 1em;
                 border-radius: 30px;
                 border: 1px solid #ccc;
             }
@@ -44,16 +46,19 @@ main {
                 width: 56px;
                 height: 100%;
                 color: #596275;
-                transition: width 0.3s ease-in-out;
+                transition: 0.2s ease-in-out;
                 box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
                 span {
+                    transition: opacity 5s ease-in-out;
                     display: none;
-                    transition: display 0.3s ease-in-out;
                 }
                 &:hover {
-                    width: 15%;
+                    cursor: pointer;
+                    width: 8%;
                     span {
-                        display: inline;
+                        display: block;
+                        cursor: pointer;
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -136,6 +141,7 @@ main {
                     }
                 }
                 &:hover {
+                    transition: 1s;
                     div.infos-text {
                         h3 {
                             &.hidden {
@@ -158,10 +164,13 @@ main {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 300px;
-    height: 100%;
-    background: #cfc8ff;
-    border-radius: 0 0 30px 30px;
+    width: 30%;
+    max-width: 300px;
+    min-width: 80px;
+    height: 39%;
+    margin-bottom: 80px;
+    background: #d4ceffea;
+    border-radius: 30px;
     box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.13);
     margin-right: 30px;
     .chatbox-header {
@@ -170,8 +179,6 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        padding: 1em;
         border-radius: 30px 30px 0 0;
         background: #9996b388;
         h3 {
@@ -196,12 +203,12 @@ main {
             z-index: 11;
             background: transparent;
             border: none;
-            color: #C8BFFF;
+            color: #dfdaff;
             font-size: 1rem;
             margin: 0;
             padding: 0;
             &:hover {
-                color: #b29ace;
+                color: #ddbfff;
             }
         }
     }
@@ -215,9 +222,23 @@ main {
             justify-content: start;
             align-items: center;
             margin: 0 0 .5em;
-            .chatbox-message-text {
-                font-size: .8rem;
-                margin: 0;
+            .chatbox-message-content {
+                overflow: hidden;
+                p.UserMessage {
+                    border-radius: 30px;
+                    padding: .5em 1em;
+                    text-align: right;
+                    color: rgb(61, 56, 56);
+                    font-size: 0.9rem;
+                    p.AIMessage {
+                        background: #fff;
+                        border-radius: 30px;
+                        padding: .5em 1em;
+                        text-align: left;
+                        color: rgb(95, 95, 95);
+                        font-size: 1rem;
+                    }
+                }
             }
             .chatbox-message-time {
                 font-size: 1rem;
@@ -229,18 +250,22 @@ main {
         border-radius: 30px 30px 0 0;
         background: #C8BFFF;
         input {
-            width: calc(100%);
+            position: absolute;
+            top: 305px;
+            width: calc(95%);
             height: 30px;
             padding: .5em;
             border-radius: 30px;
             border: 1px solid #ccc;
         }
         button {
-            background: #6961a1;
+            position: absolute;
+            top: 340px;
+            background: #2d1d3d42;
             border-radius: 30px;
             min-width: 200px;
             border: none;
-            color: rgb(187, 187, 187);
+            color: rgb(231, 231, 231);
             font-size: 2rem;
             margin: 0;
             padding: 0;
@@ -250,6 +275,7 @@ main {
             transform: translateX(-50%);
             &:hover {
                 color: #ffffff;
+                background: #422b5842;
                 cursor: pointer;
             }
         }

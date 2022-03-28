@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="<?= URL_ROOT ?>/public/css/normalize.css">
     <link rel="stylesheet" href="<?= URL_ROOT ?>/public/css/global.style.css">
     <?php if(isset($data['cssFile'])): ?><link rel="stylesheet" href="<?= URL_ROOT ?>/public/css/<?= $data['cssFile'] ?>.style.css"><?php endif; ?>
+    <!--- If we are on the diagnosis page, search for the diagnosis css !-->
+    <?php if(isset($data['cssFile']) && $data['cssFile'] == "diagnosis"): ?><link rel="stylesheet" href="<?= URL_ROOT ?>/public/css/diagnosis.style.css"><?php endif; ?>
 
     <!-- Load FontAwsome and Jquery -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous">
