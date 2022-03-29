@@ -6,7 +6,7 @@ require APP_ROOT . '/views/inc/head.php';
     <?php
     require APP_ROOT . '/views/inc/header.php';
     ?>
-    <main>
+    <main>  
         <div class="searchbar">
             <form action="<?= URL_ROOT; ?>/search" method="post">
                 <input type="text" name="search" placeholder="Search.." id="searchBar">

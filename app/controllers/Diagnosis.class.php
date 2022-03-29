@@ -27,6 +27,8 @@
 					'scriptFile' => 'search',
 					'issuesResults' => $issuesResults
 				];
+				
+
 
 				$this->render('diagnosis/index', $data);
 			}
