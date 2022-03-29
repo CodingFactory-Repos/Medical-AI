@@ -16,26 +16,34 @@ require APP_ROOT . '/views/inc/head.php';
             <p class="diseaseLongDesc diseaseText"> <?= substr($data['issuesResults']['MedicalCondition'], 0, 80) ?>...</p>
             <h3 class="categoryName">Symptômes possibles : </h3>
             <table class="diseaseListSymptoms ">
-                <?php $Symptoms = explode(",", $data['issuesResults']['PossibleSymptoms']);  ?>        
+                <?php $sympromList = 0;
+                $Symptoms = explode(",", $data['issuesResults']['PossibleSymptoms']);  ?>        
 
                
                 <?php foreach ($Symptoms as $Symptom) : ?>
+                    <?php if ($sympromList < 5) : ?>
                     <tr>
                         <td class="diseaseText"><?= $Symptom ?></td>
                     </tr>
+                    <?php $sympromList++; ?>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </table>
             <h3 class="categoryName">Nom scientifique : </h3>
             <p class="diseaseProName diseaseText"><?= $data['issuesResults']['ProfName'] ?></p>
             <h3 class="categoryName">Synonymes : </h3>
             <table class="diseaseListSymptoms ">
-                <?php $Synonyms = explode(",", $data['issuesResults']['Synonyms']);  ?>        
+                <?php $synonymList = 0;
+                $Synonyms = explode(",", $data['issuesResults']['Synonyms']);  ?>  
 
                
-                <?php foreach ($Synonyms as $Synonym) : ?>
+                <?php foreach ($Synonyms as $Synonym) :?>
+                    <?php if ($synonymList < 3) :?>
                     <tr>
                         <td class="diseaseText"><?= $Synonym ?></td>
                     </tr>
+                    <?php $synonymList++;
+                endif; ?>
                 <?php endforeach; ?>
             </table>
             <h3 class="categoryName">Traitement : </h3>
