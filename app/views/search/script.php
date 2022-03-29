@@ -1,4 +1,5 @@
 <script>
+    <?php require_once PUBLIC_ROOT . '/js/header.js'; ?>
     $(document).ready(function() {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -45,12 +46,15 @@
         });
         $(".searchTag").on("click", (e) => {
             console.log(e.target.innerText);
+            console.log(urlParams.get('name').split(',').length);
+            console.log(urlParams.get('name'))
 
             let searchActualNames = "";
             let searchActualIds = "";
 
             for(i = 0; i < urlParams.get('name').split(',').length; i++) {
                 if(urlParams.get('name').split(',')[i] != e.target.innerText) {
+                    console.log(searchActualNames.length)
                     if(searchActualNames.length > 0) {
                         searchActualNames += ",";
                         searchActualIds += ",";
@@ -59,8 +63,14 @@
                     searchActualIds += urlParams.get('id').split(',')[i];
                 }
             }
+            console.log (searchActualNames + " " + searchActualIds);
 
-            window.location.href = '<?= URL_ROOT ?>/search?id=' + searchActualIds + '&name=' + searchActualNames;
+            if (searchActualNames.length == 0) {
+                window.location.href = "<?= URL_ROOT ?>";
+            } else {
+                window.location.href = "<?= URL_ROOT ?>/search?id=" + searchActualIds + "&name=" + searchActualNames;
+            }
+            
         });
     });
 </script>
