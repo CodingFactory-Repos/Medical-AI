@@ -11,9 +11,9 @@ require APP_ROOT . '/views/inc/head.php';
             <h2 class="categoryName"><i class="fas fa-search"></i> Results</h2>
             <h2 class="diseaseName diseaseText"><?= $data['issuesResults']['Name'] ?></h2>
             <h3 class="categoryName">Description : </h3>
-            <p class="diseaseDesc diseaseText"><?= $data['issuesResults']['Description'] ?></pc>
+            <p class="diseaseDesc diseaseText"><?= substr($data['issuesResults']['Description'], 0, 80) ?>...</pc>
             <h3 class="categoryName"> Détails : </h3>
-            <p class="diseaseLongDesc diseaseText"> <?= $data['issuesResults']['MedicalCondition'] ?></p>
+            <p class="diseaseLongDesc diseaseText"> <?= substr($data['issuesResults']['MedicalCondition'], 0, 80) ?>...</p>
             <h3 class="categoryName">Symptômes possibles : </h3>
             <table class="diseaseListSymptoms ">
                 <?php $Symptoms = explode(",", $data['issuesResults']['PossibleSymptoms']);  ?>        
@@ -39,7 +39,7 @@ require APP_ROOT . '/views/inc/head.php';
                 <?php endforeach; ?>
             </table>
             <h3 class="categoryName">Traitement : </h3>
-            <p class="diseaseTreatment"><?= $data['issuesResults']['TreatmentDescription'] ?></p>
+            <p class="diseaseTreatment"><?= substr($data['issuesResults']['TreatmentDescription'], 0, 80) ?>...</p>
         </div>
     </main>
     <?php

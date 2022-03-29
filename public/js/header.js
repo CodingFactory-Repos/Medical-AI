@@ -12,8 +12,12 @@ document.addEventListener('mouseover', (e) => {
 
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('imgLogo')) {
-        window.location.href = 'index.php';
-
+        // If we aren't on index or search page, redirect to index page
+        if (window.location.pathname !== '/Medical-AI/index.php' && window.location.pathname !== '/Medical-AI/' && window.location.pathname !== '/Medical-AI/search') {
+            window.location.href = '../index.php';
+        } else {
+            window.location.href = 'index.php';
+        }
     }
 
 });
