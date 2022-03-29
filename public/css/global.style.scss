@@ -8,6 +8,7 @@
 .iframe {
     // Faire passer le iframe devant les autres sans pour autant cacher le body et le header
     position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -72,64 +73,14 @@ body {
     }
     footer {
         .hideLogo {
-            width: 40px;
+            width: 10%;
             height: 40px;
-            background-color: #F9CDEA;
+            background-color: #DCE7FF;
             position: absolute;
+            position: fixed;
             top: 94%;
-            left: 97%;
+            left: 96%;
             z-index: 400;
         }
     }
-}
-
-.diseaseName {
-    background: #cfcfcf73;
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-    text-align: center;
-}
-
-.diseaseDesc {
-    background: #cfcfcf73;
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-}
-
-.diseaseLongDesc {
-    background: #cfcfcf73;
-    color: rgba(15, 15, 15, 0.76);
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-}
-
-.diseaseListSymptoms {
-    background: #cfcfcf73;
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-}
-
-.diseaseProName {
-    background: #cfcfcf73;
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-}
-
-.diseaseSynonyms {
-    background: #cfcfcf73;
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
-}
-
-.diseaseTreatment {
-    background: #cfcfcf73;
-    padding: 1em;
-    border-radius: 30px;
-    margin: 1em 0;
 }
