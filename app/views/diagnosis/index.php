@@ -42,7 +42,9 @@ require APP_ROOT . '/views/inc/head.php';
             <p class="diseaseTreatment"><?= $data['issuesResults']['TreatmentDescription'] ?></p>
         </div>
     </main>
-
+    <?php
+    require APP_ROOT . '/views/search/script.php';
+    ?>
     <?php
     require APP_ROOT . '/views/inc/footer.php';
     ?>
