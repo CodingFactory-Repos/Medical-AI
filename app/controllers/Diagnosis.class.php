@@ -23,7 +23,7 @@
 
 				$data = [
 					'headTitle' => 'Welcome !',
-					'cssFile' => 'search',
+					'cssFile' => 'diagnosis',
 					'scriptFile' => 'search',
 					'issuesResults' => $issuesResults
 				];

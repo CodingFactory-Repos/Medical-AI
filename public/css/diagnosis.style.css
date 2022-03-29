@@ -1,0 +1,48 @@
+main {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-left: 55%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: -100px;
+}
+
+main .diseaseListSymptoms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+}
+
+main .categoryName {
+  font-size: 1.5em;
+  color: #5c5c5c;
+  margin-top: 20px;
+}
+
+main .diseaseText {
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.632);
+  margin-top: 20px;
+}
+/*# sourceMappingURL=diagnosis.style.css.map */
