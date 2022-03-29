@@ -32,7 +32,7 @@ require APP_ROOT . '/views/inc/head.php';
         </div>
     </main>
     <?php
-    require APP_ROOT . '/views/script.php';
+    require APP_ROOT . '/views/search/script.php';
     ?>
     <?php
     require APP_ROOT . '/views/inc/footer.php';
