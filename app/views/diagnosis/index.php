@@ -7,33 +7,42 @@ require APP_ROOT . '/views/inc/head.php';
     require APP_ROOT . '/views/inc/header.php';
     ?>
     <main>
-        <div class="diagnosisList class">
-            <h2 class="class-title"><i class="fas fa-search"></i> Results</h2>
-            <h2 class="diseaseName"><?= $data['issuesResults']['Name'] ?></h2>
-            <h3>Description : </h3>
-            <p class="diseaseDesc"><?= $data['issuesResults']['Description'] ?></pc>
-            <h3> Détails : </h3>
-            <p class="diseaseLongDesc"> <?= $data['issuesResults']['MedicalCondition'] ?></p>
-            <h3>Symptômes possibles : </h3>
-            <table class="diseaseListSymptoms">
-                <?= $Symptoms = $data['issuesResults']['PossibleSymptoms'];
-                echo gettype($Symptoms)
-                // for ($i = 0; $i < count($Symptoms); $i++) {
-                //     echo $Symptoms[$i];
-                // }
-                ?>
+        <div class="diagnosisList">
+            <h2 class="categoryName"><i class="fas fa-search"></i> Results</h2>
+            <h2 class="diseaseName diseaseText"><?= $data['issuesResults']['Name'] ?></h2>
+            <h3 class="categoryName">Description : </h3>
+            <p class="diseaseDesc diseaseText"><?= $data['issuesResults']['Description'] ?></pc>
+            <h3 class="categoryName"> Détails : </h3>
+            <p class="diseaseLongDesc diseaseText"> <?= $data['issuesResults']['MedicalCondition'] ?></p>
+            <h3 class="categoryName">Symptômes possibles : </h3>
+            <table class="diseaseListSymptoms ">
+                <?php $Symptoms = explode(",", $data['issuesResults']['PossibleSymptoms']);  ?>        
+
+               
+                <?php foreach ($Symptoms as $Symptom) : ?>
+                    <tr>
+                        <td class="diseaseText"><?= $Symptom ?></td>
+                    </tr>
+                <?php endforeach; ?>
             </table>
-            <h3>Nom scientifique : </h3>
-            <p class="diseaseProName"><?= $data['issuesResults']['ProfName'] ?></p>
-            <h3>Synonymes : </h3>
-            <p class="diseaseSynonyms"><?= $data['issuesResults']['Synonyms'] ?></p>
-            <h3>Traitement : </h3>
+            <h3 class="categoryName">Nom scientifique : </h3>
+            <p class="diseaseProName diseaseText"><?= $data['issuesResults']['ProfName'] ?></p>
+            <h3 class="categoryName">Synonymes : </h3>
+            <table class="diseaseListSymptoms ">
+                <?php $Synonyms = explode(",", $data['issuesResults']['Synonyms']);  ?>        
+
+               
+                <?php foreach ($Synonyms as $Synonym) : ?>
+                    <tr>
+                        <td class="diseaseText"><?= $Synonym ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+            <h3 class="categoryName">Traitement : </h3>
             <p class="diseaseTreatment"><?= $data['issuesResults']['TreatmentDescription'] ?></p>
         </div>
     </main>
-    <?php
-    require APP_ROOT . '/views/script.php';
-    ?>
+
     <?php
     require APP_ROOT . '/views/inc/footer.php';
     ?>
