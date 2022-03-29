@@ -45,4 +45,52 @@ main .diseaseText {
   color: rgba(0, 0, 0, 0.632);
   margin-top: 20px;
 }
+
+main .diseaseContainer h4.hidden {
+  display: none;
+}
+
+main .diseaseContainer h4.visible {
+  display: block;
+}
+
+main .diseaseContainer:hover h4.hidden {
+  display: block;
+}
+
+main .diseaseContainer:hover h4.visible {
+  display: none;
+}
+
+main .longDescContainer p.hidden {
+  display: none;
+}
+
+main .longDescContainer p.visible {
+  display: block;
+}
+
+main .longDescContainer:hover p.hidden {
+  display: block;
+}
+
+main .longDescContainer:hover p.visible {
+  display: none;
+}
+
+main .treatmentContainer p.hidden {
+  display: none;
+}
+
+main .treatmentContainer p.visible {
+  display: block;
+}
+
+main .treatmentContainer:hover p.hidden {
+  display: block;
+}
+
+main .treatmentContainer:hover p.visible {
+  display: none;
+}
 /*# sourceMappingURL=diagnosis.style.css.map */

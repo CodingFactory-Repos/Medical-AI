@@ -87,7 +87,7 @@ body main {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: rgba(215, 143, 233, 0.242);
+  background: rgba(220, 155, 236, 0.75);
   padding: 2em;
   width: 70%;
   border-radius: 40px;
