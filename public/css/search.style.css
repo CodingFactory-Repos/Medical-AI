@@ -1,3 +1,10 @@
+main {
+  margin-left: 55%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: -100px;
+}
+
 main div.searchbar ul.searchBarResults {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +55,7 @@ main div.searchbar ul.searchBarResults li a {
 }
 
 main div.searchbar form {
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
