@@ -63,7 +63,7 @@ class Api extends Controller
             // Load your key from an environment variable
             $open_ai = new OpenAi(getenv('OPEN_AI_KEY'));
 
-            if ($this->aiModel->addHistory($_GET['name'] . ": " . $_GET['query'], 1)) {
+            if ($this->aiModel->addHistory("Client: " . $_GET['query'], 1)) {
                 $history = $this->aiModel->getHistory();
                 $prompt = "";
                 for ($i = 0; $i < count($history); $i++) {
@@ -78,15 +78,17 @@ class Api extends Controller
                     "top_p" => 1,
                     "frequency_penalty" => 0,
                     "presence_penalty" => 0,
-                    "stop" => [$_GET['name'] . ":"]
+                    "stop" => ["Client:"]
                 ]), true);
 
                 $results = [];
 
                 for ($i = 0; $i < count($complete['choices']); $i++) {
                     // If $complete['choices'][$i]['text'] have a ":" in it, it's a symptom
-                    if (strstr($complete['choices'][$i]['text'], ":")) {
-                        $results[$i] = explode(": ", $complete['choices'][$i]['text'])[1];
+                    if (strstr($complete['choices'][$i]['text'], "Client:")) {
+                        $results[$i] = explode("Client:", $complete['choices'][$i]['text'])[0];
+                    } else {
+                        $results[$i] = $complete['choices'][$i]['text'];
                     }
 
                     // If $complete['choices'][$i]['text'] doesn't have a ":" in it, it's an issue
@@ -97,7 +99,7 @@ class Api extends Controller
 
 
                 if (!empty($results[0])) {
-                    if ($this->aiModel->addHistory("Chatbot: " . $results[0], 0)) {
+                    if ($this->aiModel->addHistory($results[0], 0)) {
                         $data['result'] = json_encode($this->aiModel->getHistory());
                     } else {
                         $data['result'] = json_encode(array("error" => "Error while bot saving history"));
