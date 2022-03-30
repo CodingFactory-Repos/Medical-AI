@@ -72,3 +72,25 @@ $('.chatbox-send').click(function() {
 
 
 });
+$('.chatbox-close').on('click', function(e) {
+    e.preventDefault();
+    $('.chatbox').fadeOut(300);
+    $('.fa-robot').fadeIn(300);
+
+    $('.fa-robot').css('zIndex', '49');
+    
+    $('.fa-robot').css('opacity', '1');
+    // console.log($('.fa-robot').css('display'));
+
+
+});
+$('.fa-robot').click(function() {
+    $('.chatbox').fadeIn(300);
+    $('.fa-robot').fadeOut(300);
+    $('.chatbox').css('zIndex', '50');
+    $('.chatbox').css('opacity', '1');
+    $('.fa-robot').css('zIndex', '49');
+    $('.fa-robot').css('opacity', '0');
+    // console.log($('.fa-robot').css('display'));
+
+});
