@@ -96,6 +96,21 @@ body main {
   margin-bottom: 5em;
 }
 
+body .chatbox {
+  height: 500px;
+}
+
+body .chatbox .chatbox-footer {
+  height: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body footer .hideLogo {
   width: 10%;
   height: 40px;
@@ -104,6 +119,19 @@ body footer .hideLogo {
   position: fixed;
   top: 94%;
   left: 96%;
-  z-index: 400;
+  z-index: 10;
+}
+
+.fa-robot {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  font-size: 5em;
+  opacity: 1;
+  z-index: 50;
+}
+
+.chatbox {
+  opacity: 0;
 }
 /*# sourceMappingURL=global.style.css.map */
