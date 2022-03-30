@@ -45,6 +45,7 @@ require APP_ROOT . '/views/inc/head.php';
         
     </main>
 
+    <i class="fas fa-robot"></i>
     <div class="chatbox">
         <div class="chatbox-header">
             <h3 class="chatbox-title">HeyMedical AI</h3>
@@ -63,6 +64,8 @@ require APP_ROOT . '/views/inc/head.php';
             <input type="text" class="chatbox-input" placeholder="Type your message here...">
             <button class="chatbox-send" type="submit">Send</button>
         </from>
+
+        
     </div>
     <?php
     require APP_ROOT . '/views/' . $data['scriptFile'] . '/script.php';
