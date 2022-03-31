@@ -243,6 +243,19 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   display: none;
 }
 
+.fa-robot {
+  font-size: 2.5rem;
+}
+
+.fa-robot:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #942d2d;
+  cursor: pointer;
+}
+
 .chatbox {
   z-index: 11;
   position: fixed;

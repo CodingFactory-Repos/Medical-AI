@@ -161,6 +161,16 @@ main {
     }
 }
 
+.fa-robot {
+    font-size: 2.5rem;
+    &:hover {
+        transition: 1s;
+        transform: scale(1.2);
+        color: rgb(148, 45, 45);
+        cursor: pointer;
+    }
+}
+
 .chatbox {
     z-index: 11;
     position: fixed;
