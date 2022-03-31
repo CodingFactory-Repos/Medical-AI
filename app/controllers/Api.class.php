@@ -64,20 +64,22 @@ class Api extends Controller
             $open_ai = new OpenAi(getenv('OPEN_AI_KEY'));
 
             if ($this->aiModel->addHistory("Client: " . $_GET['query'], 1)) {
+                
                 $history = $this->aiModel->getHistory();
                 $prompt = "";
                 for ($i = 0; $i < count($history); $i++) {
-                    $prompt = $history[$i]['a_text_history'] . $prompt . "\n";
+                    $prompt = $history[$i]['a_text_history'] . $prompt . "";
+                
                 }
 
                 $complete = json_decode($open_ai->complete([
                     'engine' => 'davinci',
                     'prompt' => $prompt,
                     'temperature' => 0.7,
-                    "max_tokens" => 100,
+                    "max_tokens" => 1000,
                     "top_p" => 1,
-                    "frequency_penalty" => 0,
-                    "presence_penalty" => 0,
+                    "frequency_penalty" => 1,
+                    "presence_penalty" => 1,
                     "stop" => ["Client:"]
                 ]), true);
 
