@@ -69,14 +69,14 @@ class Api extends Controller
                 $prompt = "";
                 for ($i = 0; $i < count($history); $i++) {
                     $prompt = $history[$i]['a_text_history'] . $prompt . "";
-                
+                    break;
                 }
 
                 $complete = json_decode($open_ai->complete([
                     'engine' => 'davinci',
                     'prompt' => $prompt,
-                    'temperature' => 0.7,
-                    "max_tokens" => 1000,
+                    'temperature' => 0.6,
+                    "max_tokens" => 100,
                     "top_p" => 1,
                     "frequency_penalty" => 1,
                     "presence_penalty" => 1,
