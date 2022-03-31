@@ -108,7 +108,7 @@ class Api extends Controller
                         $data['result'] = json_encode(array("error" => "Error while bot saving history"));
                     }
                 } else {
-                    if ($this->aiModel->addHistory("Chatbot: Je suis désolé, je n'ai malereusement pas compris", 0)) {
+                    if ($this->aiModel->addHistory("Chatbot: Sorry I did not understand could you repeat ?", 0)) {
                         $data['result'] = json_encode($this->aiModel->getHistory());
                     } else {
                         $data['result'] = json_encode(array("error" => "Error while bot saving history"));
