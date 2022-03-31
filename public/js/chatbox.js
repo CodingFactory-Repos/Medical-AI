@@ -1,7 +1,7 @@
 // Chatbox.ts
 // Created by Louis on 08/03/2022.
 // On form submit .chatbox-send button
-var isNameEntered = false;
+var isNameEntered = true;
 var canBotRespond = false;
 var chatboxName = "";
 $('.chatbox-send').click(function() {
