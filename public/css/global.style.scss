@@ -30,6 +30,7 @@ body {
     background-repeat: no-repeat;
     padding: 0 5%;
     header {
+        margin-left: -20%;
         padding: 2em 0;
         div.container {
             z-index: 49;
@@ -70,18 +71,15 @@ body {
         z-index: 50;
         position: relative;
         margin-bottom: 5em;
-
     }
-    .chatbox{
-
+    .chatbox {
         height: 500px;
-        .chatbox-footer{
+        .chatbox-footer {
             height: 10%;
             width: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
-
         }
     }
     footer {
@@ -98,15 +96,15 @@ body {
     }
 }
 
-.fa-robot{
+.fa-robot {
     position: absolute;
     top: 90%;
     left: 90%;
     font-size: 5em;
     opacity: 1;
     z-index: 50;
-
 }
-.chatbox{
+
+.chatbox {
     opacity: 0;
 }

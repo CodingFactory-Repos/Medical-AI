@@ -31,6 +31,7 @@ body {
 }
 
 body header {
+  margin-left: -20%;
   padding: 2em 0;
 }
 
