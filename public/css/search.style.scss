@@ -2,9 +2,12 @@ main {
     margin-left: 55%;
     transform: translateX(-50%);
     margin-top: -100px;
+    overflow: hidden;
     div.searchbar {
+        max-width: 900px;
         ul.searchBarResults {
             display: flex;
+            overflow: scroll;
             flex-direction: row;
             justify-content: start;
             align-items: center;

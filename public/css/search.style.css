@@ -3,12 +3,18 @@ main {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-top: -100px;
+  overflow: hidden;
+}
+
+main div.searchbar {
+  max-width: 900px;
 }
 
 main div.searchbar ul.searchBarResults {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: scroll;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
