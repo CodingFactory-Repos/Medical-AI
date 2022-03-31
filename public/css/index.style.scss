@@ -127,14 +127,14 @@ main {
                 }
                 div.infos-text {
                     margin: 5px 0 0;
-                    h3 { 
+                    h3 {
                         font-size: 1rem;
                         margin: 0;
                         &.hidden {
                             visibility: visible !important;
                             font-size: 0;
                             display: none;
-                            z-index : 50;
+                            z-index: 50;
                         }
                     }
                     h4 {
@@ -149,7 +149,6 @@ main {
                             &.hidden {
                                 font-size: 1rem;
                                 display: block;
-                                
                             }
                             &.visible {
                                 display: none;
@@ -207,7 +206,9 @@ main {
             background: transparent;
             border: none;
             color: #dfdaff;
-            font-size: 1rem;
+            font-size: 3rem;
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
             &:hover {
@@ -219,33 +220,36 @@ main {
         height: calc(80% - 1em);
         overflow-y: scroll;
         padding: 1em;
-        .chatbox-message {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            align-items: center;
-            margin: 0 0 .5em;
-            .chatbox-message-content {
-                overflow: hidden;
-                p.UserMessage {
-                    border-radius: 30px;
-                    padding: .5em 1em;
-                    text-align: right;
-                    color: rgb(61, 56, 56);
-                    font-size: 0.9rem;
-                    p.AIMessage {
-                        background: #fff;
+        .chatbox-content {
+            .chatbox-message {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                margin: 0 0 .5em;
+                .chatbox-message-content {
+                    overflow: hidden;
+                    .UserMessage {
                         border-radius: 30px;
                         padding: .5em 1em;
-                        text-align: left;
-                        color: rgb(95, 95, 95);
-                        font-size: 1rem;
+                        text-align: right;
+                        color: rgb(61, 56, 56);
+                        font-size: 0.9rem;
+                        .AIMessage {
+                            background: #fff;
+                            border-radius: 30px;
+                            padding: .5em 1em;
+                            text-align: left;
+                            color: rgb(95, 95, 95);
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
                     }
                 }
-            }
-            .chatbox-message-time {
-                font-size: 1rem;
-                margin: 0;
+                .chatbox-message-time {
+                    font-size: 1rem;
+                    margin: 0;
+                }
             }
         }
     }
@@ -253,30 +257,25 @@ main {
         border-radius: 0 0 30px 30px;
         background: #C8BFFF;
         input {
-            // position: absolute;
-            top: 305px;
             width: calc(95%);
-            height: 30px;
+            height: auto;
             padding: .5em;
-            border-radius: 30px;
+            min-height: 31px;
+            border-radius: 0 0 25px 25px;
             border: 1px solid #ccc;
         }
         button {
             // position: absolute;
-            top: 340px;
-            background: #2d1d3d42;
-            border-radius: 30px;
+            background: #321d4695;
+            border-radius: 10px 10px 30px 30px;
             min-width: 200px;
+            width: 100%;
+            height: auto;
+            padding: .2em;
+            margin-top: -10px;
             border: none;
             color: rgb(231, 231, 231);
             font-size: 2rem;
-            margin: 0;
-            padding: 0;
-            margin-top: 10px;
-            margin-left: 60%;
-            margin-bottom: 10px;
-            transform: translateX(-50%);
-            
             &:hover {
                 color: #ffffff;
                 background: #422b5842;

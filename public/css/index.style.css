@@ -305,7 +305,9 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   background: transparent;
   border: none;
   color: #dfdaff;
-  font-size: 1rem;
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -320,7 +322,7 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   padding: 1em;
 }
 
-.chatbox .chatbox-body .chatbox-message {
+.chatbox .chatbox-body .chatbox-content .chatbox-message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,11 +339,11 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   margin: 0 0 .5em;
 }
 
-.chatbox .chatbox-body .chatbox-message .chatbox-message-content {
+.chatbox .chatbox-body .chatbox-content .chatbox-message .chatbox-message-content {
   overflow: hidden;
 }
 
-.chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage {
+.chatbox .chatbox-body .chatbox-content .chatbox-message .chatbox-message-content .UserMessage {
   border-radius: 30px;
   padding: .5em 1em;
   text-align: right;
@@ -349,16 +351,17 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   font-size: 0.9rem;
 }
 
-.chatbox .chatbox-body .chatbox-message .chatbox-message-content p.UserMessage p.AIMessage {
+.chatbox .chatbox-body .chatbox-content .chatbox-message .chatbox-message-content .UserMessage .AIMessage {
   background: #fff;
   border-radius: 30px;
   padding: .5em 1em;
   text-align: left;
   color: #5f5f5f;
   font-size: 1rem;
+  font-weight: bold;
 }
 
-.chatbox .chatbox-body .chatbox-message .chatbox-message-time {
+.chatbox .chatbox-body .chatbox-content .chatbox-message .chatbox-message-time {
   font-size: 1rem;
   margin: 0;
 }
@@ -369,29 +372,25 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 }
 
 .chatbox .chatbox-footer input {
-  top: 305px;
   width: calc(95%);
-  height: 30px;
+  height: auto;
   padding: .5em;
-  border-radius: 30px;
+  min-height: 31px;
+  border-radius: 0 0 25px 25px;
   border: 1px solid #ccc;
 }
 
 .chatbox .chatbox-footer button {
-  top: 340px;
-  background: #2d1d3d42;
-  border-radius: 30px;
+  background: #321d4695;
+  border-radius: 10px 10px 30px 30px;
   min-width: 200px;
+  width: 100%;
+  height: auto;
+  padding: .2em;
+  margin-top: -10px;
   border: none;
   color: #e7e7e7;
   font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  margin-top: 10px;
-  margin-left: 60%;
-  margin-bottom: 10px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .chatbox .chatbox-footer button:hover {
