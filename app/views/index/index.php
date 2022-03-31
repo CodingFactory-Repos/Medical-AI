@@ -55,7 +55,7 @@ require APP_ROOT . '/views/inc/head.php';
             <div class="chatbox-content">
                 <div class="chatbox-message">
                     <div class="chatbox-message-content">
-                        <p class="AIMessage">Docteur HeyMedical: Saisissez votre prénom afin de commencer</p>
+                        <p class="AIMessage">Docteur HeyMedical: Hello, what is your problem ? </p>
                     </div>
                 </div>
             </div>

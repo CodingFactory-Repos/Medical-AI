@@ -127,12 +127,14 @@ main {
                 }
                 div.infos-text {
                     margin: 5px 0 0;
-                    h3 {
+                    h3 { 
                         font-size: 1rem;
                         margin: 0;
                         &.hidden {
+                            visibility: visible !important;
                             font-size: 0;
                             display: none;
+                            z-index : 50;
                         }
                     }
                     h4 {
@@ -147,6 +149,7 @@ main {
                             &.hidden {
                                 font-size: 1rem;
                                 display: block;
+                                
                             }
                             &.visible {
                                 display: none;
@@ -249,18 +252,17 @@ main {
     .chatbox-footer {
         border-radius: 0 0 30px 30px;
         background: #C8BFFF;
-        position: flex;
-        align-items: center;
         input {
+            // position: absolute;
             top: 305px;
-            width: 300px;
+            width: calc(95%);
             height: 30px;
             padding: .5em;
             border-radius: 30px;
-            transform: translateX(35%);
             border: 1px solid #ccc;
         }
         button {
+            // position: absolute;
             top: 340px;
             background: #2d1d3d42;
             border-radius: 30px;
@@ -270,10 +272,11 @@ main {
             font-size: 2rem;
             margin: 0;
             padding: 0;
-            margin-top: 100px;
-            // margin-left: 50%;
+            margin-top: 10px;
+            margin-left: 60%;
             margin-bottom: 10px;
-            transform: translateX(-60%);
+            transform: translateX(-50%);
+            
             &:hover {
                 color: #ffffff;
                 background: #422b5842;

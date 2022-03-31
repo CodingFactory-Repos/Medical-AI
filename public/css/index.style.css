@@ -218,8 +218,10 @@ main div.infosList div.infos a.infos-container div.infos-text h3 {
 }
 
 main div.infosList div.infos a.infos-container div.infos-text h3.hidden {
+  visibility: visible !important;
   font-size: 0;
   display: none;
+  z-index: 50;
 }
 
 main div.infosList div.infos a.infos-container div.infos-text h4 {
@@ -364,20 +366,14 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
 .chatbox .chatbox-footer {
   border-radius: 0 0 30px 30px;
   background: #C8BFFF;
-  position: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .chatbox .chatbox-footer input {
   top: 305px;
-  width: 300px;
+  width: calc(95%);
   height: 30px;
   padding: .5em;
   border-radius: 30px;
-  -webkit-transform: translateX(35%);
-          transform: translateX(35%);
   border: 1px solid #ccc;
 }
 
@@ -391,10 +387,11 @@ main div.infosList div.infos a.infos-container:hover div.infos-text h3.visible {
   font-size: 2rem;
   margin: 0;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 10px;
+  margin-left: 60%;
   margin-bottom: 10px;
-  -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .chatbox .chatbox-footer button:hover {
