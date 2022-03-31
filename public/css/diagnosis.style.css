@@ -47,6 +47,7 @@ main .diseaseText {
 }
 
 main .diseaseContainer h4.hidden {
+  visibility: visible !important;
   display: none;
 }
 
@@ -55,6 +56,7 @@ main .diseaseContainer h4.visible {
 }
 
 main .diseaseContainer:hover h4.hidden {
+  visibility: visible !important;
   display: block;
 }
 
@@ -63,6 +65,7 @@ main .diseaseContainer:hover h4.visible {
 }
 
 main .longDescContainer p.hidden {
+  visibility: visible !important;
   display: none;
 }
 
@@ -71,6 +74,7 @@ main .longDescContainer p.visible {
 }
 
 main .longDescContainer:hover p.hidden {
+  visibility: visible !important;
   display: block;
 }
 
@@ -79,6 +83,7 @@ main .longDescContainer:hover p.visible {
 }
 
 main .treatmentContainer p.hidden {
+  visibility: visible !important;
   display: none;
 }
 
@@ -87,6 +92,7 @@ main .treatmentContainer p.visible {
 }
 
 main .treatmentContainer:hover p.hidden {
+  visibility: visible !important;
   display: block;
 }
 

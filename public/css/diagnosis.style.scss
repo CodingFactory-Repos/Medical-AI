@@ -14,7 +14,6 @@ main {
         align-items: center;
         flex-direction: column;
         font-size: 20px;
-        
     }
     .categoryName {
         font-size: 1.5em;
@@ -25,12 +24,11 @@ main {
         font-size: 1.2em;
         color: rgba(0, 0, 0, 0.632);
         margin-top: 20px;
-
-        
     }
-    .diseaseContainer{
+    .diseaseContainer {
         h4 {
             &.hidden {
+                visibility: visible !important;
                 display: none;
             }
             &.visible {
@@ -40,6 +38,7 @@ main {
         &:hover {
             h4 {
                 &.hidden {
+                    visibility: visible !important;
                     // color : black;
                     display: block;
                 }
@@ -47,13 +46,12 @@ main {
                     display: none;
                 }
             }
-    
         }
-
     }
-    .longDescContainer{
+    .longDescContainer {
         p {
             &.hidden {
+                visibility: visible !important;
                 display: none;
             }
             &.visible {
@@ -63,18 +61,19 @@ main {
         &:hover {
             p {
                 &.hidden {
+                    visibility: visible !important;
                     display: block;
                 }
                 &.visible {
                     display: none;
                 }
             }
-    
         }
     }
-    .treatmentContainer{
+    .treatmentContainer {
         p {
             &.hidden {
+                visibility: visible !important;
                 display: none;
             }
             &.visible {
@@ -84,14 +83,13 @@ main {
         &:hover {
             p {
                 &.hidden {
+                    visibility: visible !important;
                     display: block;
                 }
                 &.visible {
                     display: none;
                 }
             }
-    
         }
     }
-    
 }
