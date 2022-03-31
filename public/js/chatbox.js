@@ -31,12 +31,11 @@ $('.chatbox-send').click(function() {
 
         } else if (!isNameEntered) {
             console.log(message.indexOf(' '))
-            $('.chatbox-message-content').append("<p class=\"AIMessage\">Docteur HeyMedical : Veuillez uniquement rentrer votre prénom</p>");
         }
 
 
         $('.chatbox-input').val('');
-        $('.chatbox-message-content').append("<p class=\"UserMessage\">Vous : ".concat(message, "</p>"));
+        $('.chatbox-message-content').append("<p class=\"UserMessage\">You : ".concat(message, "</p>"));
         console.log('Envoi du message : ' + message);
         // Send message to IA
 
@@ -78,7 +77,7 @@ $('.chatbox-close').on('click', function(e) {
     $('.fa-robot').fadeIn(300);
 
     $('.fa-robot').css('zIndex', '49');
-    
+
     $('.fa-robot').css('opacity', '1');
     // console.log($('.fa-robot').css('display'));
 
