@@ -1,3 +1,9 @@
+#diseaseName {
+  font-size: 48em;
+  color: #5c5c5c;
+  margin-top: 20px;
+}
+
 main {
   overflow: hidden;
   display: -webkit-box;
@@ -31,18 +37,27 @@ main .diseaseListSymptoms {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: rgba(144, 124, 157, 0.432);
+  border-radius: 30px;
   font-size: 20px;
 }
 
 main .categoryName {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #5c5c5c;
   margin-top: 20px;
 }
 
 main .diseaseText {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  max-width: 600px;
   color: rgba(0, 0, 0, 0.632);
+  margin-top: 20px;
+}
+
+main #diseaseName {
+  font-size: 2.3em;
+  color: rgba(0, 9, 31, 0.598);
   margin-top: 20px;
 }
 
@@ -53,11 +68,21 @@ main .diseaseContainer h4.hidden {
 
 main .diseaseContainer h4.visible {
   display: block;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
 main .diseaseContainer:hover h4.hidden {
   visibility: visible !important;
   display: block;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+main .diseaseContainer:hover h4.hidden:hover {
+  opacity: 1;
 }
 
 main .diseaseContainer:hover h4.visible {
@@ -76,6 +101,13 @@ main .longDescContainer p.visible {
 main .longDescContainer:hover p.hidden {
   visibility: visible !important;
   display: block;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+main .longDescContainer:hover p.hidden:hover {
+  opacity: 1;
 }
 
 main .longDescContainer:hover p.visible {
@@ -94,6 +126,13 @@ main .treatmentContainer p.visible {
 main .treatmentContainer:hover p.hidden {
   visibility: visible !important;
   display: block;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+main .treatmentContainer:hover p.hidden:hover {
+  opacity: 1;
 }
 
 main .treatmentContainer:hover p.visible {

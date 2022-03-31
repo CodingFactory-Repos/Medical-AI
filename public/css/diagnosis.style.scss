@@ -1,3 +1,9 @@
+#diseaseName {
+    font-size: 48em;
+    color: rgb(92, 92, 92);
+    margin-top: 20px;
+}
+
 main {
     overflow: hidden;
     display: flex;
@@ -13,16 +19,24 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background: rgba(144, 124, 157, 0.432);
+        border-radius: 30px;
         font-size: 20px;
     }
     .categoryName {
-        font-size: 1.5em;
+        font-size: 1.8em;
         color: rgb(92, 92, 92);
         margin-top: 20px;
     }
     .diseaseText {
-        font-size: 1.2em;
+        font-size: 1.4em;
+        max-width: 600px;
         color: rgba(0, 0, 0, 0.632);
+        margin-top: 20px;
+    }
+    #diseaseName {
+        font-size: 2.3em;
+        color: rgba(0, 9, 31, 0.598);
         margin-top: 20px;
     }
     .diseaseContainer {
@@ -33,6 +47,8 @@ main {
             }
             &.visible {
                 display: block;
+                transition: opacity 1s ease-in-out;
+                opacity: 1;
             }
         }
         &:hover {
@@ -41,6 +57,11 @@ main {
                     visibility: visible !important;
                     // color : black;
                     display: block;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
                 &.visible {
                     display: none;
@@ -63,6 +84,11 @@ main {
                 &.hidden {
                     visibility: visible !important;
                     display: block;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
                 &.visible {
                     display: none;
@@ -85,6 +111,11 @@ main {
                 &.hidden {
                     visibility: visible !important;
                     display: block;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
                 &.visible {
                     display: none;
