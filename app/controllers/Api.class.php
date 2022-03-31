@@ -92,9 +92,12 @@ class Api extends Controller
                     }
 
                     // If $complete['choices'][$i]['text'] doesn't have a ":" in it, it's an issue
-//                    if (strstr($complete['choices'][$i]['text'], "\n")) {
+//                    if (strstr($results[$i], "\n")) {
 //                        $results[$i] = explode("\n", $results[$i])[0];
 //                    }
+
+                    // Replace all \n with nothing
+                    $results[$i] = str_replace("\n", "", $results[$i]);
                 }
 
 
